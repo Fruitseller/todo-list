@@ -41,9 +41,10 @@ Todo-Listenfunktionen :
 •	/F28/ Datumsfelder öffnen Datetimepicker Dialog
 •	/F29/ Zahlenfeld „Priorität“ bedienbar mit Inkrement Buttons (+1 , -1)
 •	/F200/ Selektionsfeld „betroffene Kontakte“ bedienbar
-•	/F201/
+•	/F201/ 
 
 ### 5. Produkt – Daten
+
 
 ### 6. Produkt-Leistungen:
 
@@ -54,5 +55,9 @@ Todo-Listenfunktionen :
 ### 9. Globale Testszenarien
 
 ### 10. Entwicklungsumgebung
+•	Visual Studio 2013 
+•	.net 4.0
+•	SQlite Version 3.8.8.2
+•	Nhibernate 4.0.3
 
 ### 11. Ergänzungen
