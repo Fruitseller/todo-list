@@ -8,12 +8,13 @@ Musskriterien:
 
 Wunschkriterien: 
 * Skalierung der GUI
+* Export der Termine in Excel
 
 ### 2. Produkteinsatz
 Anwendungsbereiche:
-Das Produkt wird in Firmen zur Terminverwaltung eingesetzt.
+Das Produkt wird in Firmen oder von Privatpersonen zur Terminverwaltung eingesetzt.
 Zielgruppe:
-Alle Angestellten die Termine wahrnehmen müssen.
+Alle Personen die Termine wahrnehmen müssen.
 
 ### 3. Produkt-Umgebung
 Software:
@@ -54,15 +55,28 @@ Todo-Listenfunktionen:
 *	/F200/ Selektionsfeld „betroffene Kontakte“ bedienbar
 *	/F201/ Mehrzeiliges Textfeld "Beschreibung" bedienbar
 
+Daten-Funktionen:
+* /F30/ Schnittstelle zur Datenbank erstellen
+* /F31/ Entitäten für Termine und Kontakte erstellen
+* /F32/ Datenbankschema aus Entitäten erstellen lassen
+* /F32/ Entitäten Mapping festlegen
+
+Export-Funktionen
+* /F41/ Button für Export der Termine einbauen
+* /F42/ Export Button öffnen einen File Dialog, wo man den Speicherort bestimmt
+* /F43/ Export Logik einbauen
+
 ### 5. Produkt–Daten
 * /D10/ Kontaktdaten der angelegten Kontakte
 * /D11/ TODO-Listen mit Einträgen und deren Zustand
-* /D12/ Einträge mit Start- und Enddaten, Priorität und Beschreibung
+* /D12/ Termindaten mit Start- und Enddaten, Priorität und Beschreibung
 * /D13/ Verknüpfung von Einträgen und Kontakten
 
 ### 6. Produkt-Leistungen:
+Die Anwendung soll eine gute Reaktionszeit auf Benutzereingaben bieten. Ermöglichen soll das die lokale Datenbank SQLite.
 
 ### 7. Benutzeroberfläche
+Die Benutzeroberfläche setzt sich aus verschiedenen WindowsForms zusammen.
 
 ### 8. Qualitäts-Zielbestimmungen
 Das Produkt muss die angefertigten Testfälle bestehen.
@@ -74,5 +88,6 @@ Das Produkt muss die angefertigten Testfälle bestehen.
 *	.net 4.0
 *	SQlite Version 3.8.8.2
 *	Nhibernate 4.0.3
+*	Spreadsheetlight 3.4
 
 ### 11. Ergänzungen
