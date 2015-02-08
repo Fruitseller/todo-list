@@ -20,14 +20,14 @@ Wunschkriterien:
 
 ### 2. Produkteinsatz
 Anwendungsbereiche:
-Das Produkt wird in Firmen oder von Privatpersonen zur Terminverwaltung eingesetzt.
+Das Produkt wird in Firmen oder von Privatpersonen zur Erstellung sowie Verwaltung von TODO-Listen und Terminen verwendet.
 
 Zielgruppe:
 Alle Personen die Termine wahrnehmen müssen.
 
 ### 3. Produkt-Umgebung
 Software:
-Das Clientsystem benötigt ein Windows Betriebssystem mit .net 4.0 Installation.
+Das Clientsystem benötigt ein Windows 7 Betriebssystem oder höher mit .net 4.0 Installation.
 
 Hardware:
 Die Systemvorrausetzungen gehen nicht über die des Betriebssystem hinaus.
@@ -57,7 +57,7 @@ Todo-Listenfunktionen:
 *	/F21/ Button für neue Todo Einträge bedienbar
 *	/F22/ Button für neue Todo Einträge öffnet Todo Erstellungs Dialog
 *	/F23/ Button „Löschen“ löscht den selektierten Eintrag und eventuelle Untereinträge
-* /F24/ Button „Neuer Eintrag“ öffnet den Erstellungsdialog für einen neuen Eintrag
+*	/F24/ Button „Neuer Eintrag“ öffnet den Erstellungsdialog für einen neuen Eintrag
 *	/F25/ Textfeld „Titel“ bedienbar
 *	/F26/ Datumsfeld „Startdatum“ bedienbar
 *	/F27/ Datumsfeld „Enddatum“ bedienbar
@@ -88,8 +88,11 @@ Die Anwendung soll eine gute Reaktionszeit auf Benutzereingaben bieten. Ermögli
 
 ### 7. Benutzeroberfläche
 Die Benutzeroberfläche setzt sich aus verschiedenen WindowsForms zusammen.
+Für jede der Hauptfunktionen wird ein eigenes Fenster geöffnet mit speziell für die Funktion angepassten Bedienfeldern.
+Die Übersicht der TODO-Listen wird durch eine Treeview realisiert. Dadurch wird eine gute Übersicht über die eigenen Aufgaben garantiert.
+Die Treeview bietet die Möglichkeit den Benutzer jederzeit den Ist-Zustand seiner Aufgaben visuell anzuzeigen wodurch eine gute Bedienbarkeit sichergestellt wird.
 
-### 10. Entwicklungsumgebung
+### 8. Entwicklungsumgebung
 *	Visual Studio 2013 
 *	.net 4.0
 *	SQlite Version 3.8.8.*
