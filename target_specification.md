@@ -21,14 +21,17 @@ Wunschkriterien:
 ### 2. Produkteinsatz
 Anwendungsbereiche:
 Das Produkt wird in Firmen oder von Privatpersonen zur Terminverwaltung eingesetzt.
+
 Zielgruppe:
 Alle Personen die Termine wahrnehmen müssen.
 
 ### 3. Produkt-Umgebung
 Software:
 Das Clientsystem benötigt ein Windows Betriebssystem mit .net 4.0 Installation.
+
 Hardware:
 Die Systemvorrausetzungen gehen nicht über die des Betriebssystem hinaus.
+
 Produktschnittstellen:
 Die Anwendung hat eine Schnittstelle zu SQlite, welches die Daten speichert und zur Verfügung stellt.
 
@@ -86,16 +89,9 @@ Die Anwendung soll eine gute Reaktionszeit auf Benutzereingaben bieten. Ermögli
 ### 7. Benutzeroberfläche
 Die Benutzeroberfläche setzt sich aus verschiedenen WindowsForms zusammen.
 
-### 8. Qualitäts-Zielbestimmungen
-Das Produkt muss die angefertigten Testfälle bestehen.
-
-### 9. Globale Testszenarien
-
 ### 10. Entwicklungsumgebung
 *	Visual Studio 2013 
 *	.net 4.0
-*	SQlite Version 3.8.8.2
-*	Nhibernate 4.0.3
+*	SQlite Version 3.8.8.*
+*	Nhibernate 4.0.*
 *	Spreadsheetlight 3.4
-
-### 11. Ergänzungen
