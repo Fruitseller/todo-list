@@ -23,7 +23,7 @@ Anwendungsbereiche:
 Das Produkt wird in Firmen oder von Privatpersonen zur Erstellung sowie Verwaltung von TODO-Listen und Terminen verwendet.
 
 Zielgruppe:
-Alle Personen die Termine wahrnehmen müssen.
+Alle Personen die Termine wahrnehmen oder TODO-Listen verwalten müssen.
 
 ### 3. Produkt-Umgebung
 Software:
@@ -34,6 +34,7 @@ Die Systemvorrausetzungen gehen nicht über die des Betriebssystem hinaus.
 
 Produktschnittstellen:
 Die Anwendung hat eine Schnittstelle zu SQlite, welches die Daten speichert und zur Verfügung stellt.
+Die SQLite Installation wird bei den Programm mitgeliefert, muss also nicht extra installiert werden.
 
 ### 4. Produkt–Funktionen
 Startfunktionen:
@@ -84,7 +85,8 @@ Export-Funktionen
 * /D13/ Verknüpfung von Einträgen und Kontakten
 
 ### 6. Produkt-Leistungen:
-Die Anwendung soll eine gute Reaktionszeit auf Benutzereingaben bieten. Ermöglichen soll das die lokale Datenbank SQLite.
+* /L10/ Zügige Reaktionszeit auf Benutzereingaben, sichergestellt durch die lokale Datenbank SQLite
+* /L11/ Daten sollen nach den Beenden des Programms gespeichert bleiben
 
 ### 7. Benutzeroberfläche
 Die Benutzeroberfläche setzt sich aus verschiedenen WindowsForms zusammen.
