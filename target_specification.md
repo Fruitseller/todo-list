@@ -1,3 +1,11 @@
+### Projektbeschreibung
+Aufgrund der vielen Verspätungen bei Terminen, soll eine Softwarelösung entwickelt werden, mit der Mitarbeiter
+ihre Termine verwalten können. Hinzu kommt eine Unterteilung in Todo Listen, um ein besseres Filtern von Terminen 
+zu ermöglichen.
+
+Die Software soll auf allen möglichen PC Konfigurationen funktionieren. Als einzige Grundvorrausetzung soll eine .net 3.5 Version gegeben sein.
+
+
 ### 1. Zielbestimmungen
 Musskriterien:
 *	Anlegen von Kontakten
