@@ -3,7 +3,7 @@ Aufgrund der vielen Verspätungen bei Terminen, soll eine Softwarelösung entwic
 ihre Termine verwalten können. Hinzu kommt eine Unterteilung in Todo Listen, um ein besseres Filtern von Terminen 
 zu ermöglichen.
 
-Die Software soll auf allen möglichen PC Konfigurationen funktionieren. Als einzige Grundvorrausetzung soll eine .net 3.5 Version gegeben sein.
+Die Software soll auf allen möglichen PC Konfigurationen funktionieren. Als einzige Grundvorrausetzung soll eine .net 4.0 Version gegeben sein.
 
 
 ### 1. Zielbestimmungen
