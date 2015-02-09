@@ -14,7 +14,7 @@ Musskriterien:
 *	Grafische Benutzeroberfläche
 *	Datenbankanbindung
 
-**Wunschkriterien:** 
+Wunschkriterien:
 * Skalierung der GUI
 * Export der Termine in Excel
 
