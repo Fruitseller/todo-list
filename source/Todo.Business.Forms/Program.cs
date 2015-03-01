@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Todo.Business.Entities;
 
-namespace Todo.Business.Forms
+
+namespace Todo.Forms
 {
     static class Program
     {
@@ -14,9 +16,14 @@ namespace Todo.Business.Forms
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartForm());
+            Todo.Business.Database.NhibernateInitalize init = new Business.Database.NhibernateInitalize();
+
+            init.Initialize();
+
+
+            // List all the entries' names
+    
+
         }
     }
 }
