@@ -58,11 +58,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Contact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Todo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mapping\Todo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mapping\Contact.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
