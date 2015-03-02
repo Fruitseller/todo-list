@@ -22,8 +22,6 @@ namespace Todo.Forms
 
 
             // List all the entries' names
-    
-
         }
     }
 }

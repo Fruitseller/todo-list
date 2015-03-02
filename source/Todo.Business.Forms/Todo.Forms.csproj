@@ -98,9 +98,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Todo.Business.Database\Todo.Business.Database.csproj">
-      <Project>{88346c7f-aead-461c-a054-9059708662a1}</Project>
+      <Project>{F4C41F61-A335-4722-B2CD-9EE14AE29CDC}</Project>
       <Name>Todo.Business.Database</Name>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
     <ProjectReference Include="..\Todo.Business.Entities\Todo.Business.Entities.csproj">
       <Project>{29ca7270-ea7e-48ac-bb6e-1456f0082bce}</Project>
