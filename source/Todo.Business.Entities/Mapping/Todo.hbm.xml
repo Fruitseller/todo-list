@@ -7,8 +7,8 @@
     <id name="TodoId" column="TodoId" type="int">
       <generator class="native"></generator>
     </id>
-    <property name="Time" />
-    <property name="Description" />
+    <property name="Title" type="string"/>
+    <many-to-one name="Parent" column="TodoId" class="Todo" ></many-to-one>
   </class>
 
 </hibernate-mapping>

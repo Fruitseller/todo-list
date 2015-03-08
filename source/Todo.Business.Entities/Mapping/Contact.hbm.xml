@@ -1,1 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                  assembly="Todo.Business.Entities"
+                  namespace="Todo.Business.Entities">
+
+  <class name="Contact" table="Contacts">
+    <id name="ContactId" column="ContactId" type="int">
+      <generator class="native"></generator>
+    </id>
+    <property name="Gender" />
+    <property name="FirstName" />
+    <property name="Lastname" />
+    <property name="Address" />
+    <property name="City" />
+    <property name="AreaCode" />
+    <property name="isBusiness" />
+    <property name="LandlineNumber" />
+    <property name="MobileNumber" />
+    <property name="Company" />
+    <property name="Department" />
+    <bag name="Appointments" table="Contacts_x_Appointments">
+      <key column="AppointmentId"/>
+      <many-to-many class="Appointment" column="Fk_AppointmentId"/>
+    </bag>
+  </class>
+
+</hibernate-mapping>

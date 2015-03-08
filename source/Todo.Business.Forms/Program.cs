@@ -18,7 +18,7 @@ namespace Todo.Forms
         {
             Todo.Business.Database.NhibernateInitalize init = new Business.Database.NhibernateInitalize();
 
-            init.Initialize();
+     
 
 
             // List all the entries' names

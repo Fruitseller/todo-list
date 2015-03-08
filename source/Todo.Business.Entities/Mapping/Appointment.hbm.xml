@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                  assembly="Todo.Business.Entities"
+                  namespace="Todo.Business.Entities">
+
+  <class name="Appointment" table="Appointments">
+    <id name="AppointmentId" column="AppointmentId" type="int">
+      <generator class="native"></generator>
+    </id>
+    <property name="StartDate" />
+    <property name="EndDate" />
+    <property name="Priority" />
+    <property name="Description" />
+    <many-to-one name="TodoEntry" column="TodoId" class="Todo" ></many-to-one>
+    <bag name="Contacts" table="Contacts_x_Appointments">
+      <key column="ContactId"/>
+      <many-to-many class="Contact" column="FK_ContactId"/>
+    </bag>
+  </class>
+
+</hibernate-mapping>

@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
+using Todo.Business.Entities;
+using NHibernate.Mapping.ByCode;
+using NHibernate.Linq;
 
 namespace Todo.Business.Database
 {
@@ -15,27 +18,28 @@ namespace Todo.Business.Database
 
         public NhibernateInitalize ()
         {
-
+            Configuration config = GetConfig();
         }
 
-        private void BuildSchema()
+        private void Initialize()
         {
             
         }
 
-        public void Initialize()
+        public Configuration GetConfig()
         {
             var cfg = new Configuration();
             cfg.Configure();
-            cfg.AddAssembly(typeof(Todo.Business.Entities.Todo).Assembly);
-
-            // Get ourselves an NHibernate Session
+            cfg.AddAssembly("Todo.Business.Entities");
+       
             var sessions = cfg.BuildSessionFactory();
             session = sessions.OpenSession();
+            SchemaUpdate up = new SchemaUpdate(cfg);
+            up.Execute(true, true);
 
-            NHibernate.Tool.hbm2ddl.SchemaExport se;
-            se = new NHibernate.Tool.hbm2ddl.SchemaExport(cfg);
-            se.Execute(false, true, false, session.Connection, null);
+        
+            return cfg;
+
         }
 
     }
