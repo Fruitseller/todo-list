@@ -17,11 +17,8 @@ namespace Todo.Forms
         static void Main()
         {
             Todo.Business.Database.NhibernateInitalize init = new Business.Database.NhibernateInitalize();
-
-     
-
-
-            // List all the entries' names
+            StartForm form = new StartForm();
+            form.Show();
         }
     }
 }
