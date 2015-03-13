@@ -111,7 +111,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo.Business.Database\Todo.Database.csproj">
+    <ProjectReference Include="..\Todo.Database\Todo.Database.csproj">
       <Project>{f4c41f61-a335-4722-b2cd-9ee14ae29cdc}</Project>
       <Name>Todo.Database</Name>
     </ProjectReference>
