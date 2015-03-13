@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Todo.Business.Entities
+namespace Todo.Business
 {
     public class Todo
     {

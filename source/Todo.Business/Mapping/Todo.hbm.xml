@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-                  assembly="Todo.Business.Entities"
-                  namespace="Todo.Business.Entities">
+                  assembly="Todo.Business"
+                  namespace="Todo.Business">
 
   <class name="Todo" table="Todos">
     <id name="TodoId" column="TodoId" type="int">

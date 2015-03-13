@@ -66,9 +66,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo.Business.Entities\Todo.Business.Entities.csproj">
-      <Project>{29CA7270-EA7E-48AC-BB6E-1456F0082BCE}</Project>
-      <Name>Todo.Business.Entities</Name>
+    <ProjectReference Include="..\Todo.Business\Todo.Business.csproj">
+      <Project>{0c8a14ef-dfdb-4a33-ae06-1dc83b5054d8}</Project>
+      <Name>Todo.Business</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

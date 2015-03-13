@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Todo.Business.Entities;
-
+using Todo.Database;
 
 namespace Todo.Forms
 {
@@ -16,7 +15,7 @@ namespace Todo.Forms
         [STAThread]
         static void Main()
         {
-            Todo.Business.Database.NhibernateInitalize init = new Business.Database.NhibernateInitalize();
+            NhibernateInitalize.Setup();
             StartForm form = new StartForm();
             form.Show();
         }

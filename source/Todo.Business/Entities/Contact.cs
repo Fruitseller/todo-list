@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Todo.Business.Entities
+namespace Todo.Business
 {
     public class Contact
     {
