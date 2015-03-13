@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -60,14 +61,18 @@
     <Compile Include="NhibernateTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="hibernate.cfg.xml">
+    <EmbeddedResource Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Todo.Business\Todo.Business.csproj">
       <Project>{0c8a14ef-dfdb-4a33-ae06-1dc83b5054d8}</Project>
       <Name>Todo.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Todo.Database\Todo.Database.csproj">
+      <Project>{f4c41f61-a335-4722-b2cd-9ee14ae29cdc}</Project>
+      <Name>Todo.Database</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

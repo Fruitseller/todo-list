@@ -41,9 +41,11 @@ namespace Todo.UnitTests
         [TestMethod]
         public void CanCreateMapping()
         {
-            _cfg.AddAssembly(typeof(Business.Todo).Assembly);
+            var cfg = new Configuration();
+            cfg.Configure();
+            cfg.AddAssembly(typeof(Business.Todo).Assembly);
       
-            Assert.AreNotEqual(_cfg.ClassMappings.Count,0);
+            Assert.AreNotEqual(cfg.ClassMappings.Count,0);
         }
 
 
