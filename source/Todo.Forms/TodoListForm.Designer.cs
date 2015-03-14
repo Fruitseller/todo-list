@@ -32,6 +32,21 @@
 			this.newTodoListButton = new System.Windows.Forms.Button();
 			this.newEntryButton = new System.Windows.Forms.Button();
 			this.deleteButton = new System.Windows.Forms.Button();
+			this.titleLabel = new System.Windows.Forms.Label();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.startDateTitle = new System.Windows.Forms.Label();
+			this.startDatePicker = new System.Windows.Forms.DateTimePicker();
+			this.endDateTitle = new System.Windows.Forms.Label();
+			this.endDatePicker = new System.Windows.Forms.DateTimePicker();
+			this.priorityLabel = new System.Windows.Forms.Label();
+			this.priorityElement = new System.Windows.Forms.NumericUpDown();
+			this.chooseContactsButton = new System.Windows.Forms.Button();
+			this.choosenContactTitle = new System.Windows.Forms.Label();
+			this.descriptionTitle = new System.Windows.Forms.Label();
+			this.saveCheckBox = new System.Windows.Forms.CheckBox();
+			this.choosenContacts = new System.Windows.Forms.RichTextBox();
+			this.descriptionBox = new System.Windows.Forms.RichTextBox();
+			((System.ComponentModel.ISupportInitialize)(this.priorityElement)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// treeView1
@@ -68,18 +83,151 @@
 			this.deleteButton.Text = "Löschen";
 			this.deleteButton.UseVisualStyleBackColor = true;
 			// 
+			// titleLabel
+			// 
+			this.titleLabel.AutoSize = true;
+			this.titleLabel.Location = new System.Drawing.Point(319, 13);
+			this.titleLabel.Name = "titleLabel";
+			this.titleLabel.Size = new System.Drawing.Size(27, 13);
+			this.titleLabel.TabIndex = 4;
+			this.titleLabel.Text = "Titel";
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(434, 13);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(100, 20);
+			this.textBox1.TabIndex = 5;
+			// 
+			// startDateTitle
+			// 
+			this.startDateTitle.AutoSize = true;
+			this.startDateTitle.Location = new System.Drawing.Point(319, 50);
+			this.startDateTitle.Name = "startDateTitle";
+			this.startDateTitle.Size = new System.Drawing.Size(58, 13);
+			this.startDateTitle.TabIndex = 6;
+			this.startDateTitle.Text = "Startdatum";
+			// 
+			// startDatePicker
+			// 
+			this.startDatePicker.Location = new System.Drawing.Point(434, 50);
+			this.startDatePicker.Name = "startDatePicker";
+			this.startDatePicker.Size = new System.Drawing.Size(200, 20);
+			this.startDatePicker.TabIndex = 7;
+			// 
+			// endDateTitle
+			// 
+			this.endDateTitle.AutoSize = true;
+			this.endDateTitle.Location = new System.Drawing.Point(319, 88);
+			this.endDateTitle.Name = "endDateTitle";
+			this.endDateTitle.Size = new System.Drawing.Size(55, 13);
+			this.endDateTitle.TabIndex = 8;
+			this.endDateTitle.Text = "Enddatum";
+			// 
+			// endDatePicker
+			// 
+			this.endDatePicker.Location = new System.Drawing.Point(434, 88);
+			this.endDatePicker.Name = "endDatePicker";
+			this.endDatePicker.Size = new System.Drawing.Size(200, 20);
+			this.endDatePicker.TabIndex = 9;
+			// 
+			// priorityLabel
+			// 
+			this.priorityLabel.AutoSize = true;
+			this.priorityLabel.Location = new System.Drawing.Point(319, 131);
+			this.priorityLabel.Name = "priorityLabel";
+			this.priorityLabel.Size = new System.Drawing.Size(42, 13);
+			this.priorityLabel.TabIndex = 10;
+			this.priorityLabel.Text = "Priorität";
+			// 
+			// priorityElement
+			// 
+			this.priorityElement.Location = new System.Drawing.Point(434, 131);
+			this.priorityElement.Name = "priorityElement";
+			this.priorityElement.Size = new System.Drawing.Size(120, 20);
+			this.priorityElement.TabIndex = 11;
+			// 
+			// chooseContactsButton
+			// 
+			this.chooseContactsButton.Location = new System.Drawing.Point(434, 176);
+			this.chooseContactsButton.Name = "chooseContactsButton";
+			this.chooseContactsButton.Size = new System.Drawing.Size(120, 23);
+			this.chooseContactsButton.TabIndex = 12;
+			this.chooseContactsButton.Text = "Kontakte auswählen";
+			this.chooseContactsButton.UseVisualStyleBackColor = true;
+			// 
+			// choosenContactTitle
+			// 
+			this.choosenContactTitle.AutoSize = true;
+			this.choosenContactTitle.Location = new System.Drawing.Point(319, 223);
+			this.choosenContactTitle.Name = "choosenContactTitle";
+			this.choosenContactTitle.Size = new System.Drawing.Size(101, 13);
+			this.choosenContactTitle.TabIndex = 13;
+			this.choosenContactTitle.Text = "betroffene Kontakte";
+			// 
+			// descriptionTitle
+			// 
+			this.descriptionTitle.AutoSize = true;
+			this.descriptionTitle.Location = new System.Drawing.Point(319, 326);
+			this.descriptionTitle.Name = "descriptionTitle";
+			this.descriptionTitle.Size = new System.Drawing.Size(72, 13);
+			this.descriptionTitle.TabIndex = 15;
+			this.descriptionTitle.Text = "Beschreibung";
+			// 
+			// saveCheckBox
+			// 
+			this.saveCheckBox.AutoSize = true;
+			this.saveCheckBox.Location = new System.Drawing.Point(434, 484);
+			this.saveCheckBox.Name = "saveCheckBox";
+			this.saveCheckBox.Size = new System.Drawing.Size(61, 17);
+			this.saveCheckBox.TabIndex = 17;
+			this.saveCheckBox.Text = "Erledigt";
+			this.saveCheckBox.UseVisualStyleBackColor = true;
+			// 
+			// choosenContacts
+			// 
+			this.choosenContacts.Location = new System.Drawing.Point(434, 223);
+			this.choosenContacts.Name = "choosenContacts";
+			this.choosenContacts.Size = new System.Drawing.Size(200, 59);
+			this.choosenContacts.TabIndex = 18;
+			this.choosenContacts.Text = "";
+			// 
+			// descriptionBox
+			// 
+			this.descriptionBox.Location = new System.Drawing.Point(434, 326);
+			this.descriptionBox.Name = "descriptionBox";
+			this.descriptionBox.Size = new System.Drawing.Size(200, 136);
+			this.descriptionBox.TabIndex = 19;
+			this.descriptionBox.Text = "";
+			// 
 			// TodoListForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(650, 628);
+			this.Controls.Add(this.descriptionBox);
+			this.Controls.Add(this.choosenContacts);
+			this.Controls.Add(this.saveCheckBox);
+			this.Controls.Add(this.descriptionTitle);
+			this.Controls.Add(this.choosenContactTitle);
+			this.Controls.Add(this.chooseContactsButton);
+			this.Controls.Add(this.priorityElement);
+			this.Controls.Add(this.priorityLabel);
+			this.Controls.Add(this.endDatePicker);
+			this.Controls.Add(this.endDateTitle);
+			this.Controls.Add(this.startDatePicker);
+			this.Controls.Add(this.startDateTitle);
+			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.deleteButton);
 			this.Controls.Add(this.newEntryButton);
 			this.Controls.Add(this.newTodoListButton);
 			this.Controls.Add(this.treeView1);
 			this.Name = "TodoListForm";
 			this.Text = "TODO-Listen";
+			((System.ComponentModel.ISupportInitialize)(this.priorityElement)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -89,5 +237,19 @@
 		private System.Windows.Forms.Button newTodoListButton;
 		private System.Windows.Forms.Button newEntryButton;
 		private System.Windows.Forms.Button deleteButton;
+		private System.Windows.Forms.Label titleLabel;
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Label startDateTitle;
+		private System.Windows.Forms.DateTimePicker startDatePicker;
+		private System.Windows.Forms.Label endDateTitle;
+		private System.Windows.Forms.DateTimePicker endDatePicker;
+		private System.Windows.Forms.Label priorityLabel;
+		private System.Windows.Forms.NumericUpDown priorityElement;
+		private System.Windows.Forms.Button chooseContactsButton;
+		private System.Windows.Forms.Label choosenContactTitle;
+		private System.Windows.Forms.Label descriptionTitle;
+		private System.Windows.Forms.CheckBox saveCheckBox;
+		private System.Windows.Forms.RichTextBox choosenContacts;
+		private System.Windows.Forms.RichTextBox descriptionBox;
 	}
 }
