@@ -17,7 +17,7 @@ namespace Todo.Forms
         {
             NhibernateInitalize.Setup();
             StartForm form = new StartForm();
-            form.Show();
+            form.ShowDialog();
         }
     }
 }
