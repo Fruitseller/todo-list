@@ -7,7 +7,7 @@ using NHibernate.Linq;
 
 namespace Todo.Business.Repositories
 {
-    public class RepositoryBase<T>
+    public class RepositoryBase<T> : IDisposable
     {
         protected ISession session;
 
@@ -16,14 +16,14 @@ namespace Todo.Business.Repositories
             this.session = session;
         }
 
-        protected List<T> GetAll(T type)
+        public List<T> GetAll(T type)
         {
             List<T> listOfEntities = null;
 
             listOfEntities = session.Query<T>().ToList();
             return null;
         }
-        protected T GetSingleById(int id)
+        public T GetSingleById(int id)
         {
             T entity = default(T);
             entity = session.Get<T>(id);
@@ -31,18 +31,30 @@ namespace Todo.Business.Repositories
             return entity;
         }
 
-        protected void DeleteById(T entity)
+        public void DeleteById(T entity)
         {
             session.Delete(entity);
             session.Flush();
         }
 
-        protected void Update(T entity)
+        public void Update(T entity)
         {
             session.Update(entity);
             session.Flush();
         }
 
+        public void Save(T entity)
+        {
+            session.Clear();
+            session.Save(entity);
+            session.Flush();
+        }
+
+        public void Dispose()
+        {
+            session.Close();
+            session.Dispose();
+        }
       
     }
 }

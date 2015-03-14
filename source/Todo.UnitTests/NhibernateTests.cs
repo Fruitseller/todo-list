@@ -9,8 +9,8 @@ namespace Todo.UnitTests
     [TestClass]
     public class NhibernateTests
     {
-        private ISession _session;
-        private Configuration _cfg;
+        private  ISession _session;
+        private  Configuration _cfg;
 
         [TestMethod]
         public void CanCreateConfig()
@@ -22,7 +22,7 @@ namespace Todo.UnitTests
         }
 
         [TestInitialize()]
-        public void Setup()
+        public  void Setup()
         {
             _cfg = new Configuration();
             _cfg.Configure();
