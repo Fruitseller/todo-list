@@ -33,7 +33,7 @@
 			this.newEntryButton = new System.Windows.Forms.Button();
 			this.deleteButton = new System.Windows.Forms.Button();
 			this.titleLabel = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.titleTextBox = new System.Windows.Forms.TextBox();
 			this.startDateTitle = new System.Windows.Forms.Label();
 			this.startDatePicker = new System.Windows.Forms.DateTimePicker();
 			this.endDateTitle = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
 			this.choosenContactTitle = new System.Windows.Forms.Label();
 			this.descriptionTitle = new System.Windows.Forms.Label();
 			this.saveCheckBox = new System.Windows.Forms.CheckBox();
-			this.choosenContacts = new System.Windows.Forms.RichTextBox();
+			this.choosenContactsBox = new System.Windows.Forms.RichTextBox();
 			this.descriptionBox = new System.Windows.Forms.RichTextBox();
 			((System.ComponentModel.ISupportInitialize)(this.priorityElement)).BeginInit();
 			this.SuspendLayout();
@@ -92,12 +92,12 @@
 			this.titleLabel.TabIndex = 4;
 			this.titleLabel.Text = "Titel";
 			// 
-			// textBox1
+			// titleTextBox
 			// 
-			this.textBox1.Location = new System.Drawing.Point(434, 13);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(100, 20);
-			this.textBox1.TabIndex = 5;
+			this.titleTextBox.Location = new System.Drawing.Point(434, 13);
+			this.titleTextBox.Name = "titleTextBox";
+			this.titleTextBox.Size = new System.Drawing.Size(100, 20);
+			this.titleTextBox.TabIndex = 5;
 			// 
 			// startDateTitle
 			// 
@@ -184,13 +184,13 @@
 			this.saveCheckBox.Text = "Erledigt";
 			this.saveCheckBox.UseVisualStyleBackColor = true;
 			// 
-			// choosenContacts
+			// choosenContactsBox
 			// 
-			this.choosenContacts.Location = new System.Drawing.Point(434, 223);
-			this.choosenContacts.Name = "choosenContacts";
-			this.choosenContacts.Size = new System.Drawing.Size(200, 59);
-			this.choosenContacts.TabIndex = 18;
-			this.choosenContacts.Text = "";
+			this.choosenContactsBox.Location = new System.Drawing.Point(434, 223);
+			this.choosenContactsBox.Name = "choosenContactsBox";
+			this.choosenContactsBox.Size = new System.Drawing.Size(200, 59);
+			this.choosenContactsBox.TabIndex = 18;
+			this.choosenContactsBox.Text = "";
 			// 
 			// descriptionBox
 			// 
@@ -206,7 +206,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(650, 628);
 			this.Controls.Add(this.descriptionBox);
-			this.Controls.Add(this.choosenContacts);
+			this.Controls.Add(this.choosenContactsBox);
 			this.Controls.Add(this.saveCheckBox);
 			this.Controls.Add(this.descriptionTitle);
 			this.Controls.Add(this.choosenContactTitle);
@@ -217,7 +217,7 @@
 			this.Controls.Add(this.endDateTitle);
 			this.Controls.Add(this.startDatePicker);
 			this.Controls.Add(this.startDateTitle);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.titleTextBox);
 			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.deleteButton);
 			this.Controls.Add(this.newEntryButton);
@@ -238,7 +238,7 @@
 		private System.Windows.Forms.Button newEntryButton;
 		private System.Windows.Forms.Button deleteButton;
 		private System.Windows.Forms.Label titleLabel;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox titleTextBox;
 		private System.Windows.Forms.Label startDateTitle;
 		private System.Windows.Forms.DateTimePicker startDatePicker;
 		private System.Windows.Forms.Label endDateTitle;
@@ -249,7 +249,7 @@
 		private System.Windows.Forms.Label choosenContactTitle;
 		private System.Windows.Forms.Label descriptionTitle;
 		private System.Windows.Forms.CheckBox saveCheckBox;
-		private System.Windows.Forms.RichTextBox choosenContacts;
+		private System.Windows.Forms.RichTextBox choosenContactsBox;
 		private System.Windows.Forms.RichTextBox descriptionBox;
 	}
 }
