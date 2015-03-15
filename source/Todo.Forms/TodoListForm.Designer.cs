@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.treeView1 = new System.Windows.Forms.TreeView();
+			this.todoListView = new System.Windows.Forms.TreeView();
 			this.newTodoListButton = new System.Windows.Forms.Button();
 			this.newEntryButton = new System.Windows.Forms.Button();
 			this.deleteButton = new System.Windows.Forms.Button();
@@ -49,12 +49,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.priorityElement)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// treeView1
+			// todoListView
 			// 
-			this.treeView1.Location = new System.Drawing.Point(12, 12);
-			this.treeView1.Name = "treeView1";
-			this.treeView1.Size = new System.Drawing.Size(300, 450);
-			this.treeView1.TabIndex = 0;
+			this.todoListView.Location = new System.Drawing.Point(12, 12);
+			this.todoListView.Name = "todoListView";
+			this.todoListView.Size = new System.Drawing.Size(300, 450);
+			this.todoListView.TabIndex = 0;
 			// 
 			// newTodoListButton
 			// 
@@ -144,7 +144,7 @@
 			// 
 			this.priorityElement.Location = new System.Drawing.Point(434, 131);
 			this.priorityElement.Name = "priorityElement";
-			this.priorityElement.Size = new System.Drawing.Size(120, 20);
+			this.priorityElement.Size = new System.Drawing.Size(40, 20);
 			this.priorityElement.TabIndex = 11;
 			// 
 			// chooseContactsButton
@@ -222,7 +222,7 @@
 			this.Controls.Add(this.deleteButton);
 			this.Controls.Add(this.newEntryButton);
 			this.Controls.Add(this.newTodoListButton);
-			this.Controls.Add(this.treeView1);
+			this.Controls.Add(this.todoListView);
 			this.Name = "TodoListForm";
 			this.Text = "TODO-Listen";
 			((System.ComponentModel.ISupportInitialize)(this.priorityElement)).EndInit();
@@ -233,7 +233,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.TreeView treeView1;
+		private System.Windows.Forms.TreeView todoListView;
 		private System.Windows.Forms.Button newTodoListButton;
 		private System.Windows.Forms.Button newEntryButton;
 		private System.Windows.Forms.Button deleteButton;
