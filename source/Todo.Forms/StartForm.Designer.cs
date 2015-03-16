@@ -41,6 +41,7 @@
 			this.todoListButton.TabIndex = 0;
 			this.todoListButton.Text = "TODO-Liste";
 			this.todoListButton.UseVisualStyleBackColor = true;
+			this.todoListButton.Click += new System.EventHandler(this.todoListButton_Click);
 			// 
 			// newContactButton
 			// 
@@ -50,6 +51,7 @@
 			this.newContactButton.TabIndex = 1;
 			this.newContactButton.Text = "Neuer Kontakt";
 			this.newContactButton.UseVisualStyleBackColor = true;
+			this.newContactButton.Click += new System.EventHandler(this.newContactButton_Click);
 			// 
 			// contactListButton
 			// 
@@ -59,6 +61,7 @@
 			this.contactListButton.TabIndex = 2;
 			this.contactListButton.Text = "Kontakt-Liste";
 			this.contactListButton.UseVisualStyleBackColor = true;
+			this.contactListButton.Click += new System.EventHandler(this.contactListButton_Click);
 			// 
 			// StartForm
 			// 
