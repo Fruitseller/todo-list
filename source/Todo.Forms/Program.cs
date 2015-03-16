@@ -15,7 +15,6 @@ namespace Todo.Forms
         [STAThread]
         static void Main()
         {
-            NhibernateInitalize.Setup();
             StartForm form = new StartForm();
             form.ShowDialog();
         }

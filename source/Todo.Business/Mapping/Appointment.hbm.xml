@@ -7,15 +7,15 @@
     <id name="AppointmentId" column="AppointmentId" type="int">
       <generator class="native"></generator>
     </id>
-    <property name="StartDate" />
-    <property name="EndDate" />
+    <property name="StartDate" type="DateTime" not-null="true" />
+    <property name="EndDate" type="DateTime" not-null="true"/>
     <property name="Priority" />
     <property name="Description" />
     <many-to-one name="TodoEntry" column="TodoId" class="Todo" ></many-to-one>
-    <bag name="Contacts" table="Contacts_x_Appointments">
-      <key column="ContactId"/>
-      <many-to-many class="Contact" column="FK_ContactId"/>
-    </bag>
+    <bag name="Contacts" table="Contacts_x_Appointments" inverse="true">
+      <key column="AppointmentId"/>
+      <many-to-many class="Contact" column="ContactId"/>
+    </bag >
   </class>
 
 </hibernate-mapping>

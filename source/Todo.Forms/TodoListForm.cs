@@ -11,9 +11,17 @@ namespace Todo.Forms
 {
 	public partial class TodoListForm : Form
 	{
-		public TodoListForm()
-		{
-			InitializeComponent();
-		}
+        private Business.Repositories.TodoRepository _todorepo;
+        private Business.Repositories.ContactRepository _contactRepository;
+        private Business.Repositories.AppointmentRepository _appointmentRepository;
+
+
+        public TodoListForm(Business.Repositories.TodoRepository _todorepo, Business.Repositories.ContactRepository _contactRepository, Business.Repositories.AppointmentRepository _appointmentRepository)
+        {
+            this._todorepo = _todorepo;
+            this._contactRepository = _contactRepository;
+            this._appointmentRepository = _appointmentRepository;
+            InitializeComponent();
+        }
 	}
 }

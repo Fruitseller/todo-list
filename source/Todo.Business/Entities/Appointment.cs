@@ -13,6 +13,6 @@ namespace Todo.Business
         public virtual int Priority { get; set; }
         public virtual string Description { get; set; }
         public virtual Todo TodoEntry { get; set; }
-        public virtual List<Contact> Contacts { get; set; }
+        public virtual IList<Contact> Contacts { get; set; }
     }
 }

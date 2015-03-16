@@ -11,9 +11,12 @@ namespace Todo.Forms
 {
 	public partial class ListContactsForm : Form
 	{
-		public ListContactsForm()
-		{
-			InitializeComponent();
-		}
+        private Business.Repositories.ContactRepository _contactRepository;
+
+        public ListContactsForm(Business.Repositories.ContactRepository _contactRepository)
+        {
+            this._contactRepository = _contactRepository;
+            InitializeComponent();
+        }
 	}
 }

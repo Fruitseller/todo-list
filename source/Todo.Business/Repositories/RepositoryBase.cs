@@ -25,6 +25,7 @@ namespace Todo.Business.Repositories
         }
         public T GetSingleById(int id)
         {
+            Type type = typeof(T);
             T entity = default(T);
             entity = session.Get<T>(id);
 

@@ -19,8 +19,8 @@
     <property name="Company" />
     <property name="Department" />
     <bag name="Appointments" table="Contacts_x_Appointments">
-      <key column="AppointmentId"/>
-      <many-to-many class="Appointment" column="Fk_AppointmentId"/>
+      <key column="ContactId"/>
+      <many-to-many class="Appointment" column="AppointmentId"/>
     </bag>
   </class>
 

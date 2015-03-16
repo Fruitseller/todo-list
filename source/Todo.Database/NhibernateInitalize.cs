@@ -9,6 +9,7 @@ using NHibernate.Tool.hbm2ddl;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Linq;
 using System.Data.SQLite;
+using Todo.Business.Repositories;
 
 namespace Todo.Database
 {
@@ -45,6 +46,5 @@ namespace Todo.Database
             sess = sessfac.OpenSession();
             return sess;
         }
-
     }
 }

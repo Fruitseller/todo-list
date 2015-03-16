@@ -19,6 +19,6 @@ namespace Todo.Business
         public virtual string MobileNumber { get; set; }
         public virtual string Company { get; set; }
         public virtual string Department { get; set; }
-        public virtual List<Appointment> Appointments { get; set; }
+        public virtual IList<Appointment> Appointments { get; set; }
     }
 }
