@@ -107,7 +107,6 @@
             this.areacodeLabel.Size = new System.Drawing.Size(60, 13);
             this.areacodeLabel.TabIndex = 6;
             this.areacodeLabel.Text = "Postleitzahl";
-            this.areacodeLabel.Click += new System.EventHandler(this.areacodeLabel_Click);
             // 
             // landlineLabel
             // 

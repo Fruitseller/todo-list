@@ -98,11 +98,5 @@ namespace Todo.Forms
             _contactRepository.Update(item);
             bs.ResetBindings(false);
         }
-
-        private void areacodeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
 	}
 }
