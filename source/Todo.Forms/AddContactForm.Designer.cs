@@ -110,7 +110,11 @@
 			// genderComboBox
 			// 
 			this.genderComboBox.FormattingEnabled = true;
+			this.genderComboBox.Items.AddRange(new object[] {
+            "Herr",
+            "Frau"});
 			this.genderComboBox.Location = new System.Drawing.Point(138, 20);
+			this.genderComboBox.MaxDropDownItems = 2;
 			this.genderComboBox.Name = "genderComboBox";
 			this.genderComboBox.Size = new System.Drawing.Size(121, 21);
 			this.genderComboBox.TabIndex = 6;
@@ -244,6 +248,7 @@
 			this.saveContactButton.TabIndex = 22;
 			this.saveContactButton.Text = "Speichern";
 			this.saveContactButton.UseVisualStyleBackColor = true;
+			this.saveContactButton.Click += new System.EventHandler(this.saveContactButton_Click);
 			// 
 			// AddContactForm
 			// 
