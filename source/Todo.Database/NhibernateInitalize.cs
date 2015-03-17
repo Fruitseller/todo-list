@@ -10,6 +10,7 @@ using NHibernate.Mapping.ByCode;
 using NHibernate.Linq;
 using System.Data.SQLite;
 using Todo.Business.Repositories;
+using Todo.Business;
 
 namespace Todo.Database
 {

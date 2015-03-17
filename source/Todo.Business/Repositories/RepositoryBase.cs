@@ -16,12 +16,12 @@ namespace Todo.Business.Repositories
             this.session = session;
         }
 
-        public List<T> GetAll(T type)
+        public List<T> GetAll()
         {
             List<T> listOfEntities = null;
 
             listOfEntities = session.Query<T>().ToList();
-            return null;
+            return listOfEntities;
         }
         public T GetSingleById(int id)
         {
