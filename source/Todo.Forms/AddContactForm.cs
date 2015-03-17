@@ -37,10 +37,29 @@ namespace Todo.Forms
 			this._contactRepository.Save(this.contact);
 		}
 
+		protected void clearAllTextBoxes(Control mainControl)
+		{
+			foreach(var control in mainControl.Controls)
+			{
+				if (control is TextBox)
+				{
+					((TextBox)control).Text = String.Empty;
+				}
+			}
+		}
+
+		protected void clearAllInputs()
+		{
+			//this.genderComboBox
+			//this.businessRadioButton
+			clearAllTextBoxes(this);
+		}
+
 		private void saveContactButton_Click(object sender, EventArgs e)
 		{
 			this.saveContactButton.Enabled = false;
 			saveToContactDB();
+			clearAllInputs();
 			this.saveContactButton.Enabled = true;
 		}
 	}
