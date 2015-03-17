@@ -98,5 +98,13 @@ namespace Todo.Forms
             _contactRepository.Update(item);
             bs.ResetBindings(false);
         }
+
+		private void deleteContactButton_Click(object sender, EventArgs e)
+		{
+			Contact item = SetViewToModel();
+			_contactRepository.DeleteById(item);
+			bs.RemoveCurrent();
+			bs.ResetBindings(false);
+		}
 	}
 }
