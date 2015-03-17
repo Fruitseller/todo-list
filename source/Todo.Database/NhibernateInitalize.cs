@@ -16,7 +16,7 @@ namespace Todo.Database
     public static class NhibernateInitalize
     {
         public static NHibernate.ISession session;
-        public static Configuration config;
+        public static Configuration cfg;
         private static System.Data.SQLite.SQLiteCommand cmd = new SQLiteCommand();
 
         public static void Setup()
@@ -26,22 +26,26 @@ namespace Todo.Database
 
         private static void Initialize()
         {
-            config = GetConfig();
-            session = GetSession();
-        }
-
-        private static Configuration GetConfig()
-        {
-            var cfg = new Configuration();
+            cfg = new Configuration();
             cfg.Configure();
             cfg.AddAssembly(typeof(Business.Todo).Assembly);
 
-            return cfg;
+            SchemaValidator validator = new SchemaValidator(cfg);
+            try
+            {
+                validator.Validate();
+            }
+            catch (HibernateException)
+            {
+                SchemaUpdate update = new SchemaUpdate(cfg);
+                update.Execute(false, true);
+            }
+            session = GetSession();
         }
 
         private static ISession GetSession()
         {
-            var sessfac = config.BuildSessionFactory();
+            var sessfac = cfg.BuildSessionFactory();
             ISession sess;
             sess = sessfac.OpenSession();
             return sess;
