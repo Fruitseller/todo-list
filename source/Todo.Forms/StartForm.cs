@@ -37,7 +37,7 @@ namespace Todo.Forms
 
 		private void todoListButton_Click(object sender, EventArgs e)
 		{
-			if (this.todoListForm == null)
+			if (Application.OpenForms["TodoListForm"] == null)
 			{
                 this.todoListForm = new TodoListForm(_todorepo, _contactRepository, _appointmentRepository);
 				this.todoListForm.Show();
@@ -50,7 +50,7 @@ namespace Todo.Forms
 
 		private void newContactButton_Click(object sender, EventArgs e)
 		{
-			if (this.addContactForm == null)
+			if (Application.OpenForms["AddContactForm"] == null)
 			{
                 this.addContactForm = new AddContactForm(_contactRepository);
 				this.addContactForm.Show();
@@ -63,7 +63,7 @@ namespace Todo.Forms
 
 		private void contactListButton_Click(object sender, EventArgs e)
 		{
-			if (this.listContactsForm == null)
+			if (Application.OpenForms["ListContactsForm"] == null)
 			{
                 this.listContactsForm = new ListContactsForm(_contactRepository);
 				this.listContactsForm.Show();
