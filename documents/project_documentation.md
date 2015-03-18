@@ -7,18 +7,28 @@
     2. Abteilungsumfeld
   2. Ist-Zustand
     1. Zielsetzung
+
+    Am Ende dieses Projekts soll es eine Software geben mit der Benutzer unkompliziert und einfach ihre TODO-Listen verwalten können.
+    Hauptfunktionen der Software soll es sein neue Kontakte anzulegen, bestehende Kontakte einzusehen/ändern/zulöschen, sowie TODO-Listen zu verwalten.
+
   3. Aufgabenstellung
-    1. Abgrenzung zu Fremdleistungen
+
+  Es soll eine C#-Anwendung entwickelt werden, die eine komfortable Verwaltung von beliebig vielen TODO-Listen ermöglicht. Neben der Pflege von Kontaktdaten können beliebig viele TODO-Listen und einzelne Aktivitäten angelegt werden. Alle Daten sollen in einer Datenbank (beispielsweise ACCESS) gespeichert werden. Dazu muss vorher ein geeignetes Datenmodell entwickelt werden.
+
   4. Prozessschnittstellen
-    1. Personelle Schnittstellen
-    2. Technische Schnittstellen
+    1. Technische Schnittstellen
+
+    Als technische Schnittstellen hätten wir Windows, .NET, NHibernate, SQlite sowie Visual Studio 2010.
+
   5. Technisches Umfeld
   6. Einzuhaltende Standards
     1. Qualitätsmanagement-Standards
     2. Entwicklungsstandards
+
+    In der Softwareentwicklung ist es gängiger Standard ausschließlich englische Begriffe zu verwenden.
+
 3. Projektplanung
   1. Vorgehensweise
-    1. Mögliche Lösungsalternativen
   2. Projekt- und Zeitplanung
   3. Änderungen gegenüber dem Projektauftrag
   4. Geplante Wirtschaftlichkeit
