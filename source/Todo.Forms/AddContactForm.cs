@@ -18,7 +18,14 @@ namespace Todo.Forms
         {
             this._contactRepository = _contactRepository;
             InitializeComponent();
+			initializeGenderStrings();
         }
+
+		protected void initializeGenderStrings()
+		{
+			this.genderComboBox.Items.Add(Todo.Business.Enums.Anrede.Herr);
+			this.genderComboBox.Items.Add(Todo.Business.Enums.Anrede.Frau);
+		}
 
 		protected void saveToContactDB()
 		{

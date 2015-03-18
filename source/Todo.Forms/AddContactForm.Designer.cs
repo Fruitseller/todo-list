@@ -110,9 +110,6 @@
 			// genderComboBox
 			// 
 			this.genderComboBox.FormattingEnabled = true;
-			this.genderComboBox.Items.AddRange(new object[] {
-            "Herr",
-            "Frau"});
 			this.genderComboBox.Location = new System.Drawing.Point(138, 20);
 			this.genderComboBox.MaxDropDownItems = 2;
 			this.genderComboBox.Name = "genderComboBox";
