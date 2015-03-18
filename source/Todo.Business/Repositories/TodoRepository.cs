@@ -21,5 +21,12 @@ namespace Todo.Business.Repositories
             items = session.Query<Todo>().Where(x => x.Parent.TodoId == Id).ToList();
             return items;
         }
+
+        public List<Todo> GetAllWithoutParents()
+        {
+            List<Todo> items;
+            items = session.Query<Todo>().Where(x => x.Parent == null).ToList();
+            return items;
+        }
     }
 }

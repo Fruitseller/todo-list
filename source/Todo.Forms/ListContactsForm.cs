@@ -36,7 +36,7 @@ namespace Todo.Forms
             items = _contactRepository.GetAll();
 
             bs.DataSource = items;
-            this.Contacts_Listbox.DisplayMember = "Lastname";
+            this.Contacts_Listbox.DisplayMember = "FullName";
             this.Contacts_Listbox.ValueMember = "ContactId";
             Contacts_Listbox.DataSource = bs;
         }
