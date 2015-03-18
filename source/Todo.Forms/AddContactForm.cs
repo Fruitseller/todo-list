@@ -64,10 +64,9 @@ namespace Todo.Forms
 
 		private void saveContactButton_Click(object sender, EventArgs e)
 		{
-			this.saveContactButton.Enabled = false;
 			saveToContactDB();
 			clearAllInputs();
-			this.saveContactButton.Enabled = true;
+			MessageBox.Show("Kontakt erfolgreich gespeichert!");
 		}
 	}
 }

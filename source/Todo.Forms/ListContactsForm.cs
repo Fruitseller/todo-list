@@ -104,6 +104,7 @@ namespace Todo.Forms
 			Contact item = SetViewToModel();
 			_contactRepository.DeleteById(item);
 			bs.RemoveCurrent();
+			Index_Changed(sender, e);
 			bs.ResetBindings(false);
 		}
 	}
