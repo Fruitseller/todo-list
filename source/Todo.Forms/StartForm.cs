@@ -14,6 +14,9 @@ namespace Todo.Forms
 {
     public partial class StartForm : Form
     {
+		private const string TODO_LIST_FORM_NAME = "TodoListForm";
+		private const string ADD_CONTACT_FORM_NAME = "AddContactForm";
+		private const string LIST_CONTACTS_FORM_NAME = "ListContactsForm";
 		private TodoListForm todoListForm;
 		private AddContactForm addContactForm;
 		private ListContactsForm listContactsForm;
@@ -37,7 +40,7 @@ namespace Todo.Forms
 
 		private void todoListButton_Click(object sender, EventArgs e)
 		{
-			if (Application.OpenForms["TodoListForm"] == null)
+			if (Application.OpenForms[TODO_LIST_FORM_NAME] == null)
 			{
                 this.todoListForm = new TodoListForm(_todorepo, _contactRepository, _appointmentRepository);
 				this.todoListForm.Show();
@@ -50,7 +53,7 @@ namespace Todo.Forms
 
 		private void newContactButton_Click(object sender, EventArgs e)
 		{
-			if (Application.OpenForms["AddContactForm"] == null)
+			if (Application.OpenForms[ADD_CONTACT_FORM_NAME] == null)
 			{
                 this.addContactForm = new AddContactForm(_contactRepository);
 				this.addContactForm.Show();
@@ -63,7 +66,7 @@ namespace Todo.Forms
 
 		private void contactListButton_Click(object sender, EventArgs e)
 		{
-			if (Application.OpenForms["ListContactsForm"] == null)
+			if (Application.OpenForms[LIST_CONTACTS_FORM_NAME] == null)
 			{
                 this.listContactsForm = new ListContactsForm(_contactRepository);
 				this.listContactsForm.Show();
