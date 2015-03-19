@@ -18,13 +18,15 @@ namespace Todo.Forms
         {
             this._contactRepository = _contactRepository;
             InitializeComponent();
-			initializeGenderStrings();
+			initializeSelectables();
         }
 
-		protected void initializeGenderStrings()
+		protected void initializeSelectables()
 		{
 			this.genderComboBox.Items.Add(Todo.Business.Enums.Anrede.Herr);
 			this.genderComboBox.Items.Add(Todo.Business.Enums.Anrede.Frau);
+			this.genderComboBox.SelectedIndex = this.genderComboBox.Items.IndexOf(Todo.Business.Enums.Anrede.Herr);
+			this.businessRadioButton.Checked = true;
 		}
 
 		protected void saveToContactDB()
@@ -57,8 +59,6 @@ namespace Todo.Forms
 
 		protected void clearAllInputs()
 		{
-			//this.genderComboBox
-			//this.businessRadioButton
 			clearAllTextBoxes(this);
 		}
 
