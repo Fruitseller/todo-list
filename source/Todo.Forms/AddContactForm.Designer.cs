@@ -56,7 +56,7 @@
 			// genderLabel
 			// 
 			this.genderLabel.AutoSize = true;
-			this.genderLabel.Location = new System.Drawing.Point(22, 29);
+			this.genderLabel.Location = new System.Drawing.Point(25, 30);
 			this.genderLabel.Name = "genderLabel";
 			this.genderLabel.Size = new System.Drawing.Size(41, 13);
 			this.genderLabel.TabIndex = 0;
@@ -65,7 +65,7 @@
 			// lastnameLabel
 			// 
 			this.lastnameLabel.AutoSize = true;
-			this.lastnameLabel.Location = new System.Drawing.Point(22, 84);
+			this.lastnameLabel.Location = new System.Drawing.Point(25, 90);
 			this.lastnameLabel.Name = "lastnameLabel";
 			this.lastnameLabel.Size = new System.Drawing.Size(35, 13);
 			this.lastnameLabel.TabIndex = 1;
@@ -83,7 +83,7 @@
 			// addressLabel
 			// 
 			this.addressLabel.AutoSize = true;
-			this.addressLabel.Location = new System.Drawing.Point(25, 218);
+			this.addressLabel.Location = new System.Drawing.Point(25, 210);
 			this.addressLabel.Name = "addressLabel";
 			this.addressLabel.Size = new System.Drawing.Size(42, 13);
 			this.addressLabel.TabIndex = 3;
@@ -92,7 +92,7 @@
 			// cityLabel
 			// 
 			this.cityLabel.AutoSize = true;
-			this.cityLabel.Location = new System.Drawing.Point(25, 304);
+			this.cityLabel.Location = new System.Drawing.Point(25, 270);
 			this.cityLabel.Name = "cityLabel";
 			this.cityLabel.Size = new System.Drawing.Size(21, 13);
 			this.cityLabel.TabIndex = 4;
@@ -101,7 +101,7 @@
 			// areacodeLabel
 			// 
 			this.areacodeLabel.AutoSize = true;
-			this.areacodeLabel.Location = new System.Drawing.Point(25, 384);
+			this.areacodeLabel.Location = new System.Drawing.Point(25, 330);
 			this.areacodeLabel.Name = "areacodeLabel";
 			this.areacodeLabel.Size = new System.Drawing.Size(60, 13);
 			this.areacodeLabel.TabIndex = 5;
@@ -110,7 +110,7 @@
 			// genderComboBox
 			// 
 			this.genderComboBox.FormattingEnabled = true;
-			this.genderComboBox.Location = new System.Drawing.Point(138, 20);
+			this.genderComboBox.Location = new System.Drawing.Point(100, 30);
 			this.genderComboBox.MaxDropDownItems = 2;
 			this.genderComboBox.Name = "genderComboBox";
 			this.genderComboBox.Size = new System.Drawing.Size(121, 21);
@@ -118,35 +118,35 @@
 			// 
 			// lastnameTextBox
 			// 
-			this.lastnameTextBox.Location = new System.Drawing.Point(138, 76);
+			this.lastnameTextBox.Location = new System.Drawing.Point(100, 90);
 			this.lastnameTextBox.Name = "lastnameTextBox";
 			this.lastnameTextBox.Size = new System.Drawing.Size(120, 20);
 			this.lastnameTextBox.TabIndex = 7;
 			// 
 			// firstnameTextBox
 			// 
-			this.firstnameTextBox.Location = new System.Drawing.Point(138, 142);
+			this.firstnameTextBox.Location = new System.Drawing.Point(100, 150);
 			this.firstnameTextBox.Name = "firstnameTextBox";
 			this.firstnameTextBox.Size = new System.Drawing.Size(120, 20);
 			this.firstnameTextBox.TabIndex = 8;
 			// 
 			// addressTextBox
 			// 
-			this.addressTextBox.Location = new System.Drawing.Point(138, 210);
+			this.addressTextBox.Location = new System.Drawing.Point(100, 210);
 			this.addressTextBox.Name = "addressTextBox";
 			this.addressTextBox.Size = new System.Drawing.Size(120, 20);
 			this.addressTextBox.TabIndex = 9;
 			// 
 			// cityTextBox
 			// 
-			this.cityTextBox.Location = new System.Drawing.Point(138, 296);
+			this.cityTextBox.Location = new System.Drawing.Point(100, 270);
 			this.cityTextBox.Name = "cityTextBox";
 			this.cityTextBox.Size = new System.Drawing.Size(120, 20);
 			this.cityTextBox.TabIndex = 10;
 			// 
 			// areacodeTextBox
 			// 
-			this.areacodeTextBox.Location = new System.Drawing.Point(138, 376);
+			this.areacodeTextBox.Location = new System.Drawing.Point(100, 330);
 			this.areacodeTextBox.Name = "areacodeTextBox";
 			this.areacodeTextBox.Size = new System.Drawing.Size(120, 20);
 			this.areacodeTextBox.TabIndex = 11;
@@ -154,7 +154,7 @@
 			// privateRadioButton
 			// 
 			this.privateRadioButton.AutoSize = true;
-			this.privateRadioButton.Location = new System.Drawing.Point(459, 20);
+			this.privateRadioButton.Location = new System.Drawing.Point(300, 30);
 			this.privateRadioButton.Name = "privateRadioButton";
 			this.privateRadioButton.Size = new System.Drawing.Size(51, 17);
 			this.privateRadioButton.TabIndex = 12;
@@ -165,7 +165,7 @@
 			// businessRadioButton
 			// 
 			this.businessRadioButton.AutoSize = true;
-			this.businessRadioButton.Location = new System.Drawing.Point(613, 20);
+			this.businessRadioButton.Location = new System.Drawing.Point(375, 30);
 			this.businessRadioButton.Name = "businessRadioButton";
 			this.businessRadioButton.Size = new System.Drawing.Size(82, 17);
 			this.businessRadioButton.TabIndex = 13;
@@ -176,7 +176,7 @@
 			// landlineLabel
 			// 
 			this.landlineLabel.AutoSize = true;
-			this.landlineLabel.Location = new System.Drawing.Point(459, 83);
+			this.landlineLabel.Location = new System.Drawing.Point(300, 90);
 			this.landlineLabel.Name = "landlineLabel";
 			this.landlineLabel.Size = new System.Drawing.Size(43, 13);
 			this.landlineLabel.TabIndex = 14;
@@ -185,7 +185,7 @@
 			// mobileLabel
 			// 
 			this.mobileLabel.AutoSize = true;
-			this.mobileLabel.Location = new System.Drawing.Point(459, 148);
+			this.mobileLabel.Location = new System.Drawing.Point(300, 150);
 			this.mobileLabel.Name = "mobileLabel";
 			this.mobileLabel.Size = new System.Drawing.Size(32, 13);
 			this.mobileLabel.TabIndex = 15;
@@ -194,7 +194,7 @@
 			// companyLabel
 			// 
 			this.companyLabel.AutoSize = true;
-			this.companyLabel.Location = new System.Drawing.Point(459, 302);
+			this.companyLabel.Location = new System.Drawing.Point(300, 270);
 			this.companyLabel.Name = "companyLabel";
 			this.companyLabel.Size = new System.Drawing.Size(32, 13);
 			this.companyLabel.TabIndex = 16;
@@ -203,7 +203,7 @@
 			// departmentLabel
 			// 
 			this.departmentLabel.AutoSize = true;
-			this.departmentLabel.Location = new System.Drawing.Point(456, 384);
+			this.departmentLabel.Location = new System.Drawing.Point(300, 330);
 			this.departmentLabel.Name = "departmentLabel";
 			this.departmentLabel.Size = new System.Drawing.Size(51, 13);
 			this.departmentLabel.TabIndex = 17;
@@ -211,35 +211,35 @@
 			// 
 			// landlineTextBox
 			// 
-			this.landlineTextBox.Location = new System.Drawing.Point(613, 76);
+			this.landlineTextBox.Location = new System.Drawing.Point(375, 90);
 			this.landlineTextBox.Name = "landlineTextBox";
 			this.landlineTextBox.Size = new System.Drawing.Size(120, 20);
 			this.landlineTextBox.TabIndex = 18;
 			// 
 			// mobileTextBox
 			// 
-			this.mobileTextBox.Location = new System.Drawing.Point(613, 142);
+			this.mobileTextBox.Location = new System.Drawing.Point(375, 150);
 			this.mobileTextBox.Name = "mobileTextBox";
 			this.mobileTextBox.Size = new System.Drawing.Size(120, 20);
 			this.mobileTextBox.TabIndex = 19;
 			// 
 			// companyTextBox
 			// 
-			this.companyTextBox.Location = new System.Drawing.Point(613, 296);
+			this.companyTextBox.Location = new System.Drawing.Point(375, 270);
 			this.companyTextBox.Name = "companyTextBox";
 			this.companyTextBox.Size = new System.Drawing.Size(120, 20);
 			this.companyTextBox.TabIndex = 20;
 			// 
 			// departmentTextBox
 			// 
-			this.departmentTextBox.Location = new System.Drawing.Point(613, 376);
+			this.departmentTextBox.Location = new System.Drawing.Point(375, 330);
 			this.departmentTextBox.Name = "departmentTextBox";
 			this.departmentTextBox.Size = new System.Drawing.Size(120, 20);
 			this.departmentTextBox.TabIndex = 21;
 			// 
 			// saveContactButton
 			// 
-			this.saveContactButton.Location = new System.Drawing.Point(658, 448);
+			this.saveContactButton.Location = new System.Drawing.Point(420, 380);
 			this.saveContactButton.Name = "saveContactButton";
 			this.saveContactButton.Size = new System.Drawing.Size(75, 23);
 			this.saveContactButton.TabIndex = 22;
@@ -251,7 +251,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(824, 501);
+			this.ClientSize = new System.Drawing.Size(544, 441);
 			this.Controls.Add(this.saveContactButton);
 			this.Controls.Add(this.departmentTextBox);
 			this.Controls.Add(this.companyTextBox);
