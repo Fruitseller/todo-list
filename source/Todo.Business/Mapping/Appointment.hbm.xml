@@ -10,8 +10,9 @@
     <property name="StartDate" type="DateTime" not-null="true" />
     <property name="EndDate" type="DateTime" not-null="true"/>
     <property name="Priority" />
+    <property name="Title" />
     <property name="Description" />
-    <many-to-one name="TodoEntry" column="TodoId" class="Todo" ></many-to-one>
+    <many-to-one name="TodoEntry" column="TodoId" class="Todo" cascade="all-delete-orphan"/>
     <bag name="Contacts" table="Contacts_x_Appointments" inverse="true">
       <key column="AppointmentId"/>
       <many-to-many class="Contact" column="ContactId"/>

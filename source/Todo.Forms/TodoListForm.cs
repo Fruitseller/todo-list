@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Todo.Business;
+using Todo.Business.Repositories;
+using Todo = Todo.Business.Todo;
 
 namespace Todo.Forms
 {
-	public partial class TodoListForm : Form
-	{
+    public partial class TodoListForm : Form
+    {
         private Business.Repositories.TodoRepository _todorepo;
         private Business.Repositories.ContactRepository _contactRepository;
         private Business.Repositories.AppointmentRepository _appointmentRepository;
@@ -21,6 +23,9 @@ namespace Todo.Forms
 
         private List<Contact> _assignedContacts = new List<Contact>();
         private List<Contact> _Contacts = new List<Contact>();
+
+        private List<Business.Todo> _allTodos = new List<Business.Todo>();
+        private List<Business.Appointment> _allAppointsments = new List<Business.Appointment>();
 
 
         public TodoListForm(Business.Repositories.TodoRepository _todorepo, Business.Repositories.ContactRepository _contactRepository, Business.Repositories.AppointmentRepository _appointmentRepository)
@@ -34,8 +39,17 @@ namespace Todo.Forms
 
         private void InitializeFormElements()
         {
+            this.todoListTreeView.HideSelection = false;
+
+
             //Contact List
             _Contacts = _contactRepository.GetAll();
+            
+            this.endDatePicker.Format = DateTimePickerFormat.Custom;
+            this.endDatePicker.CustomFormat =  "dd.MM.yyyy HH:mm";
+           
+            this.startDatePicker.Format = DateTimePickerFormat.Custom;
+            this.startDatePicker.CustomFormat = "dd.MM.yyyy HH:mm";
 
             ContactsListBox.DisplayMember = "FullName";
             ContactsListBox.ValueMember = "ContactId";
@@ -46,24 +60,24 @@ namespace Todo.Forms
             AssignedContactsListbox.ValueMember = "ContactId";
             bsAssignedContacts.DataSource = _assignedContacts;
             AssignedContactsListbox.DataSource = bsAssignedContacts;
-            
+
             // TODO Tree
             this.todoListTreeView.LabelEdit = true;
             TreeNode rootNode = new TreeNode("Root");
-            rootNode.Tag = -1;
+            rootNode.Tag = null;
             this.todoListTreeView.Nodes.Add(rootNode);
-            List<Todo.Business.Todo> todos = _todorepo.GetAll();
-            List<Todo.Business.Todo> orphantodos = todos.Where(x=>x.Parent==null).ToList();
-       
+            _allTodos = _todorepo.GetAll();
+            List<Business.Todo> orphantodos = _allTodos.Where(x => x.Parent == null).ToList();
+            _allAppointsments = _appointmentRepository.GetAll().ToList();
 
-            foreach(var todo in orphantodos)
+            foreach (var todo in orphantodos)
             {
                 TreeNode newNode = new TreeNode();
                 newNode.Text = todo.Title;
-                newNode.Tag = todo.TodoId;
+                newNode.Tag = todo;
                 rootNode.Nodes.Add(newNode);
+                appendChilden(newNode);
             }
-            
         }
 
 
@@ -71,6 +85,9 @@ namespace Todo.Forms
         {
             TreeNode node = this.todoListTreeView.SelectedNode;
             TreeNode newNode = new TreeNode("Neue Todoliste");
+            Business.Todo todo = new Business.Todo();
+            todo.Title = "Neue Todoliste";
+            newNode.Tag = todo;
             this.todoListTreeView.SelectedNode.Nodes.Add(newNode);
             this.todoListTreeView.SelectedNode.Expand();
             newNode.BeginEdit();
@@ -78,7 +95,26 @@ namespace Todo.Forms
 
         private void newEntryButton_Click(object sender, EventArgs e)
         {
+            Appointment app = getAppointmentFromForm();
+            TreeNode node =this.todoListTreeView.SelectedNode;
 
+            if(node.Tag is Business.Todo)
+            {
+                app.TodoEntry = (Business.Todo)node.Tag;
+                _appointmentRepository.Save(app);
+                TreeNode newNode = new TreeNode();
+                newNode.Text = app.Title;
+                newNode.Tag = app;
+                node.Nodes.Add(newNode);
+            }
+            else if(node.Tag is Appointment)
+            {
+                MessageBox.Show("Termin kann nicht einen Termin untergeordnet werden");
+            }
+            else
+	        {
+                MessageBox.Show("Kein Baumelement ausgewählt");
+	        }
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -117,22 +153,94 @@ namespace Todo.Forms
 
         private void afterAfter_Edit(TreeNode node)
         {
-            string txt = node.Text;
-            int tag=-1;
-            if (node.Tag != null)
-                tag = (int)node.Tag;
 
-            int parentid = node.Parent.Text == "Root" ? -1 : (int)node.Parent.Tag;          
-
-            if(tag ==-1)
+            if (node.Tag is Business.Todo)
             {
-                _todorepo.Save(new Business.Todo() { Title = txt, Parent = _todorepo.GetSingleById(parentid) });
-            }
-            else
-            {
+                Business.Todo todo = new Business.Todo();
+                todo.Title = node.Text;
+                int id = todo.TodoId;
+                Business.Todo parent = null;
 
+                if (node.Parent != null && node.Parent.Tag is Business.Todo)
+                {
+                    parent = (Business.Todo)node.Parent.Tag;
+                }
+                todo.Parent = parent;
+                if (id == 0)
+                {
+                    _todorepo.Save(todo);
+                }
+                else
+                {
+                    _todorepo.Update(todo);
+                }
+                node.Tag = todo;
             }
+            else if (node.Tag is Appointment)
+            {
+                Appointment app = (Appointment)node.Tag;
+
+                app.Title = node.Text;
+
+                _appointmentRepository.Update(app);
+            }
+
         }
 
-	}
+        public void appendChilden(TreeNode node)
+        {
+            if (node.Tag is Business.Todo)
+            {
+                Business.Todo todo = (Business.Todo)node.Tag;
+                List<Business.Todo> children = _allTodos.Where(x => x.Parent != null && x.Parent.TodoId == todo.TodoId).ToList();
+                List<Appointment> childrenApps = _allAppointsments.Where(x => x.TodoEntry != null && x.TodoEntry.TodoId == todo.TodoId).ToList();
+
+                foreach (var child in children)
+                {
+                    TreeNode childNode = new TreeNode();
+                    childNode.Text = child.Title;
+                    childNode.Tag = child;
+                    node.Nodes.Add(childNode);
+                    appendChilden(childNode);
+                }
+
+                foreach (var child in childrenApps)
+                {
+                    TreeNode childNode = new TreeNode();
+                    childNode.Text = child.Title;
+                    childNode.Tag = child;
+                    node.Nodes.Add(childNode);
+                }
+
+            }
+            else if (node.Tag is Business.Appointment)
+            {
+                Appointment app = (Appointment)node.Tag;
+                List<Appointment> children = _allAppointsments.Where(x => x.TodoEntry.TodoId == app.TodoEntry.TodoId).ToList();
+                foreach (var child in children)
+                {
+                    TreeNode childNode = new TreeNode();
+                    childNode.Text = child.Title;
+                    childNode.Tag = child;
+                    node.Nodes.Add(childNode);
+                }
+            }
+            return;
+        }
+
+
+        private Appointment getAppointmentFromForm()
+        {
+            Appointment app = new Appointment();
+
+            app.Contacts = this.AssignedContactsListbox.Items.Cast<Contact>().ToList();
+            app.Title = this.titleTextBox.Text;
+            app.StartDate = DateTime.Parse(startDatePicker.Text);
+            app.EndDate = DateTime.Parse(endDatePicker.Text);
+            app.Description = this.descriptionBox.Text;
+            app.Priority = (int)this.priorityElement.Value;
+          
+            return app;
+        }
+    }
 }

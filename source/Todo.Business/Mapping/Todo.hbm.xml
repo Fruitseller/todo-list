@@ -8,7 +8,9 @@
       <generator class="native"></generator>
     </id>
     <property name="Title" type="string"/>
-    <one-to-one name="Parent" class="Todo" ></one-to-one>
+    <many-to-one name="Parent" class="Todo">
+<column name="Parent_Id"/>
+</many-to-one>
   </class>
 
 </hibernate-mapping>

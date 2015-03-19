@@ -64,7 +64,7 @@
             // 
             this.newTodoListButton.Location = new System.Drawing.Point(13, 484);
             this.newTodoListButton.Name = "newTodoListButton";
-            this.newTodoListButton.Size = new System.Drawing.Size(146, 40);
+            this.newTodoListButton.Size = new System.Drawing.Size(121, 40);
             this.newTodoListButton.TabIndex = 1;
             this.newTodoListButton.Text = "Neue TODO-Liste";
             this.newTodoListButton.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@
             // 
             // newEntryButton
             // 
-            this.newEntryButton.Location = new System.Drawing.Point(165, 484);
+            this.newEntryButton.Location = new System.Drawing.Point(491, 509);
             this.newEntryButton.Name = "newEntryButton";
             this.newEntryButton.Size = new System.Drawing.Size(147, 40);
             this.newEntryButton.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(100, 530);
+            this.deleteButton.Location = new System.Drawing.Point(191, 484);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(121, 40);
             this.deleteButton.TabIndex = 3;
@@ -119,7 +119,7 @@
             // 
             this.startDatePicker.Location = new System.Drawing.Point(405, 50);
             this.startDatePicker.Name = "startDatePicker";
-            this.startDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.startDatePicker.Size = new System.Drawing.Size(142, 20);
             this.startDatePicker.TabIndex = 7;
             // 
             // endDateTitle
@@ -135,7 +135,7 @@
             // 
             this.endDatePicker.Location = new System.Drawing.Point(405, 88);
             this.endDatePicker.Name = "endDatePicker";
-            this.endDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.endDatePicker.Size = new System.Drawing.Size(142, 20);
             this.endDatePicker.TabIndex = 9;
             // 
             // priorityLabel
