@@ -243,5 +243,36 @@ namespace Todo.Forms
           
             return app;
 		}
+
+		private void castAppointmentToForm(Business.Appointment app)
+		{
+			this.titleTextBox.Text = app.Title;
+			this.startDatePicker.Text = app.StartDate.ToString();
+			this.endDatePicker.Text = app.EndDate.ToString();
+			this.priorityElement.Value = app.Priority;
+			// TODO Fix ListBox casting
+			//this.AssignedContactsListbox.Items.AddRange(app.Contacts.Cast<Contact>().ToArray());
+			this.descriptionBox.Text = app.Description;
+			this.doneCheckBox.Checked = app.Done;
+		}
+
+		private void todoListTreeView_AfterSelect(object sender, TreeViewEventArgs e)
+		{
+			if (e.Node.Tag is Business.Todo)
+			{
+
+			}
+			else if (e.Node.Tag is Business.Appointment)
+			{
+				castAppointmentToForm((Appointment)e.Node.Tag);
+			}
+		}
+
+		private void doneCheckBox_Click(object sender, EventArgs e)
+		{
+			// TODO Remove Debug Code
+			MessageBox.Show(getAppointmentFromForm().ToString());
+			//_appointmentRepository.Update(getAppointmentFromForm());
+		}
     }
 }

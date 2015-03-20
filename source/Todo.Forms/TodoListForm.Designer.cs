@@ -59,6 +59,7 @@
 			this.todoListTreeView.Size = new System.Drawing.Size(299, 465);
 			this.todoListTreeView.TabIndex = 0;
 			this.todoListTreeView.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.After_Edit);
+			this.todoListTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.todoListTreeView_AfterSelect);
 			// 
 			// newTodoListButton
 			// 
@@ -181,6 +182,7 @@
 			this.doneCheckBox.TabIndex = 17;
 			this.doneCheckBox.Text = "Erledigt";
 			this.doneCheckBox.UseVisualStyleBackColor = true;
+			this.doneCheckBox.Click += new System.EventHandler(this.doneCheckBox_Click);
 			// 
 			// descriptionBox
 			// 
