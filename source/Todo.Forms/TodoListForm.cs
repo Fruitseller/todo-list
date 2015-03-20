@@ -239,8 +239,9 @@ namespace Todo.Forms
             app.EndDate = DateTime.Parse(endDatePicker.Text);
             app.Description = this.descriptionBox.Text;
             app.Priority = (int)this.priorityElement.Value;
+			app.Done = this.doneCheckBox.Checked;
           
             return app;
-        }
+		}
     }
 }
