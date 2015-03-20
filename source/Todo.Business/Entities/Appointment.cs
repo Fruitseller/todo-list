@@ -15,5 +15,6 @@ namespace Todo.Business
         public virtual string Description { get; set; }
         public virtual Todo TodoEntry { get; set; }
         public virtual IList<Contact> Contacts { get; set; }
+        public virtual bool IsDone { get; set; }
     }
 }

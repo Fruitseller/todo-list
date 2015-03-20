@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using Todo.Business;
 using Todo.Business.Repositories;
-using Todo = Todo.Business.Todo;
 
 namespace Todo.Forms
 {
@@ -40,7 +39,6 @@ namespace Todo.Forms
         private void InitializeFormElements()
         {
             this.todoListTreeView.HideSelection = false;
-
 
             //Contact List
             _Contacts = _contactRepository.GetAll();
@@ -83,6 +81,11 @@ namespace Todo.Forms
 
         private void newTodoListButton_Click(object sender, EventArgs e)
         {
+            if(todoListTreeView.SelectedNode.Tag is Appointment)
+            {
+                MessageBox.Show("Todo Liste kann nicht einem Termin untergeordnet werden");
+                return;
+            }
             TreeNode node = this.todoListTreeView.SelectedNode;
             TreeNode newNode = new TreeNode("Neue Todoliste");
             Business.Todo todo = new Business.Todo();
@@ -103,6 +106,7 @@ namespace Todo.Forms
                 app.TodoEntry = (Business.Todo)node.Tag;
                 _appointmentRepository.Save(app);
                 TreeNode newNode = new TreeNode();
+                newNode = setImageForAppointment(newNode, app);
                 newNode.Text = app.Title;
                 newNode.Tag = app;
                 node.Nodes.Add(newNode);
@@ -197,7 +201,7 @@ namespace Todo.Forms
 
                 foreach (var child in children)
                 {
-                    TreeNode childNode = new TreeNode();
+                    TreeNode childNode = new TreeNode(child.Title, 0, 0);
                     childNode.Text = child.Title;
                     childNode.Tag = child;
                     node.Nodes.Add(childNode);
@@ -208,6 +212,7 @@ namespace Todo.Forms
                 {
                     TreeNode childNode = new TreeNode();
                     childNode.Text = child.Title;
+                    childNode = setImageForAppointment(childNode, child);
                     childNode.Tag = child;
                     node.Nodes.Add(childNode);
                 }
@@ -223,9 +228,10 @@ namespace Todo.Forms
                     childNode.Text = child.Title;
                     childNode.Tag = child;
                     node.Nodes.Add(childNode);
+                    node = setImageForAppointment(childNode, child);
                 }
+                return;
             }
-            return;
         }
 
 
@@ -239,8 +245,47 @@ namespace Todo.Forms
             app.EndDate = DateTime.Parse(endDatePicker.Text);
             app.Description = this.descriptionBox.Text;
             app.Priority = (int)this.priorityElement.Value;
+            app.IsDone = this.isDoneCheckBox.Checked;
           
             return app;
+        }
+
+        private void setViewToAppointment(Appointment app)
+        {
+            bsAssignedContacts.DataSource=app.Contacts;
+            bsAssignedContacts.ResetBindings(false);
+
+            bsContacts.DataSource = _Contacts.Where(x => !_Contacts.Any(y => y.ContactId == x.ContactId)).ToList();
+            bsContacts.ResetBindings(false);
+
+            this.titleTextBox.Text = app.Title;
+            startDatePicker.Text = app.StartDate.ToString();
+            endDatePicker.Text = app.EndDate.ToString();
+            descriptionBox.Text = app.Description;
+            priorityElement.Value = app.Priority;
+            isDoneCheckBox.Checked = app.IsDone;
+        }
+
+        private TreeNode setImageForAppointment(TreeNode node,Appointment app)
+        {
+            if (app.IsDone)
+            {
+                node.ImageIndex = 2;
+                node.SelectedImageIndex = 2;
+            }
+            else
+            {
+                node.ImageIndex = 1;
+                node.SelectedImageIndex = 1;
+            }
+
+            return node;
+        }
+
+        private void After_Select(object sender, TreeViewEventArgs e)
+        {
+            if (this.todoListTreeView.SelectedNode.Tag is Appointment)
+                setViewToAppointment((Appointment)this.todoListTreeView.SelectedNode.Tag);
         }
     }
 }

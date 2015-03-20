@@ -12,6 +12,7 @@
     <property name="Priority" />
     <property name="Title" />
     <property name="Description" />
+    <property name="IsDone" />
     <many-to-one name="TodoEntry" column="TodoId" class="Todo" cascade="all-delete-orphan"/>
     <bag name="Contacts" table="Contacts_x_Appointments" inverse="true">
       <key column="AppointmentId"/>

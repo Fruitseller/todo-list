@@ -28,6 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TodoListForm));
             this.todoListTreeView = new System.Windows.Forms.TreeView();
             this.newTodoListButton = new System.Windows.Forms.Button();
             this.newEntryButton = new System.Windows.Forms.Button();
@@ -42,23 +44,28 @@
             this.priorityElement = new System.Windows.Forms.NumericUpDown();
             this.choosenContactTitle = new System.Windows.Forms.Label();
             this.descriptionTitle = new System.Windows.Forms.Label();
-            this.saveCheckBox = new System.Windows.Forms.CheckBox();
+            this.isDoneCheckBox = new System.Windows.Forms.CheckBox();
             this.descriptionBox = new System.Windows.Forms.RichTextBox();
             this.ContactsListBox = new System.Windows.Forms.ListBox();
             this.AssignedContactsListbox = new System.Windows.Forms.ListBox();
             this.right_button = new System.Windows.Forms.Button();
             this.left_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.priorityElement)).BeginInit();
             this.SuspendLayout();
             // 
             // todoListTreeView
             // 
+            this.todoListTreeView.ImageIndex = 0;
+            this.todoListTreeView.ImageList = this.imageList1;
             this.todoListTreeView.Location = new System.Drawing.Point(13, 13);
             this.todoListTreeView.Name = "todoListTreeView";
+            this.todoListTreeView.SelectedImageIndex = 0;
             this.todoListTreeView.Size = new System.Drawing.Size(299, 465);
             this.todoListTreeView.TabIndex = 0;
             this.todoListTreeView.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.After_Edit);
+            this.todoListTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.After_Select);
             // 
             // newTodoListButton
             // 
@@ -172,15 +179,15 @@
             this.descriptionTitle.TabIndex = 15;
             this.descriptionTitle.Text = "Beschreibung";
             // 
-            // saveCheckBox
+            // isDoneCheckBox
             // 
-            this.saveCheckBox.AutoSize = true;
-            this.saveCheckBox.Location = new System.Drawing.Point(405, 509);
-            this.saveCheckBox.Name = "saveCheckBox";
-            this.saveCheckBox.Size = new System.Drawing.Size(61, 17);
-            this.saveCheckBox.TabIndex = 17;
-            this.saveCheckBox.Text = "Erledigt";
-            this.saveCheckBox.UseVisualStyleBackColor = true;
+            this.isDoneCheckBox.AutoSize = true;
+            this.isDoneCheckBox.Location = new System.Drawing.Point(405, 509);
+            this.isDoneCheckBox.Name = "isDoneCheckBox";
+            this.isDoneCheckBox.Size = new System.Drawing.Size(61, 17);
+            this.isDoneCheckBox.TabIndex = 17;
+            this.isDoneCheckBox.Text = "Erledigt";
+            this.isDoneCheckBox.UseVisualStyleBackColor = true;
             // 
             // descriptionBox
             // 
@@ -235,6 +242,14 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Zugwiesen";
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "calendar.png");
+            this.imageList1.Images.SetKeyName(1, "communities.png");
+            this.imageList1.Images.SetKeyName(2, "clipboard45.png");
+            // 
             // TodoListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,7 +261,7 @@
             this.Controls.Add(this.AssignedContactsListbox);
             this.Controls.Add(this.ContactsListBox);
             this.Controls.Add(this.descriptionBox);
-            this.Controls.Add(this.saveCheckBox);
+            this.Controls.Add(this.isDoneCheckBox);
             this.Controls.Add(this.descriptionTitle);
             this.Controls.Add(this.choosenContactTitle);
             this.Controls.Add(this.priorityElement);
@@ -285,12 +300,13 @@
         private System.Windows.Forms.NumericUpDown priorityElement;
 		private System.Windows.Forms.Label choosenContactTitle;
 		private System.Windows.Forms.Label descriptionTitle;
-        private System.Windows.Forms.CheckBox saveCheckBox;
+        private System.Windows.Forms.CheckBox isDoneCheckBox;
 		private System.Windows.Forms.RichTextBox descriptionBox;
         private System.Windows.Forms.ListBox ContactsListBox;
         private System.Windows.Forms.ListBox AssignedContactsListbox;
         private System.Windows.Forms.Button right_button;
         private System.Windows.Forms.Button left_button;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ImageList imageList1;
 	}
 }
