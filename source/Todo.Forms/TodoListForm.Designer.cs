@@ -22,12 +22,12 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TodoListForm));
             this.todoListTreeView = new System.Windows.Forms.TreeView();
@@ -51,14 +51,14 @@
             this.right_button = new System.Windows.Forms.Button();
             this.left_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.priorityElement)).BeginInit();
             this.SuspendLayout();
             // 
             // todoListTreeView
             // 
             this.todoListTreeView.ImageIndex = 0;
-            this.todoListTreeView.ImageList = this.imageList1;
+            this.todoListTreeView.ImageList = this.imageList2;
             this.todoListTreeView.Location = new System.Drawing.Point(13, 13);
             this.todoListTreeView.Name = "todoListTreeView";
             this.todoListTreeView.SelectedImageIndex = 0;
@@ -242,13 +242,13 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Zugwiesen";
             // 
-            // imageList1
+            // imageList2
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "calendar.png");
-            this.imageList1.Images.SetKeyName(1, "communities.png");
-            this.imageList1.Images.SetKeyName(2, "clipboard45.png");
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "calendar.png");
+            this.imageList2.Images.SetKeyName(1, "clipboard45.png");
+            this.imageList2.Images.SetKeyName(2, "communities.png");
             // 
             // TodoListForm
             // 
@@ -308,5 +308,6 @@
         private System.Windows.Forms.Button left_button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imageList2;
     }
 }
