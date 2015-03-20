@@ -1,33 +1,33 @@
 ﻿namespace Todo.Forms
 {
-	partial class TodoListForm
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class TodoListForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TodoListForm));
             this.todoListTreeView = new System.Windows.Forms.TreeView();
@@ -44,7 +44,7 @@
             this.priorityElement = new System.Windows.Forms.NumericUpDown();
             this.choosenContactTitle = new System.Windows.Forms.Label();
             this.descriptionTitle = new System.Windows.Forms.Label();
-            this.isDoneCheckBox = new System.Windows.Forms.CheckBox();
+            this.doneCheckBox = new System.Windows.Forms.CheckBox();
             this.descriptionBox = new System.Windows.Forms.RichTextBox();
             this.ContactsListBox = new System.Windows.Forms.ListBox();
             this.AssignedContactsListbox = new System.Windows.Forms.ListBox();
@@ -179,15 +179,15 @@
             this.descriptionTitle.TabIndex = 15;
             this.descriptionTitle.Text = "Beschreibung";
             // 
-            // isDoneCheckBox
+            // doneCheckBox
             // 
-            this.isDoneCheckBox.AutoSize = true;
-            this.isDoneCheckBox.Location = new System.Drawing.Point(405, 509);
-            this.isDoneCheckBox.Name = "isDoneCheckBox";
-            this.isDoneCheckBox.Size = new System.Drawing.Size(61, 17);
-            this.isDoneCheckBox.TabIndex = 17;
-            this.isDoneCheckBox.Text = "Erledigt";
-            this.isDoneCheckBox.UseVisualStyleBackColor = true;
+            this.doneCheckBox.AutoSize = true;
+            this.doneCheckBox.Location = new System.Drawing.Point(405, 509);
+            this.doneCheckBox.Name = "doneCheckBox";
+            this.doneCheckBox.Size = new System.Drawing.Size(61, 17);
+            this.doneCheckBox.TabIndex = 17;
+            this.doneCheckBox.Text = "Erledigt";
+            this.doneCheckBox.UseVisualStyleBackColor = true;
             // 
             // descriptionBox
             // 
@@ -261,7 +261,7 @@
             this.Controls.Add(this.AssignedContactsListbox);
             this.Controls.Add(this.ContactsListBox);
             this.Controls.Add(this.descriptionBox);
-            this.Controls.Add(this.isDoneCheckBox);
+            this.Controls.Add(this.doneCheckBox);
             this.Controls.Add(this.descriptionTitle);
             this.Controls.Add(this.choosenContactTitle);
             this.Controls.Add(this.priorityElement);
@@ -282,31 +282,31 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
+        }
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.TreeView todoListTreeView;
-		private System.Windows.Forms.Button newTodoListButton;
-		private System.Windows.Forms.Button newEntryButton;
-		private System.Windows.Forms.Button deleteButton;
-		private System.Windows.Forms.Label titleLabel;
-		private System.Windows.Forms.TextBox titleTextBox;
-		private System.Windows.Forms.Label startDateTitle;
-		private System.Windows.Forms.DateTimePicker startDatePicker;
-		private System.Windows.Forms.Label endDateTitle;
-		private System.Windows.Forms.DateTimePicker endDatePicker;
-		private System.Windows.Forms.Label priorityLabel;
+        private System.Windows.Forms.TreeView todoListTreeView;
+        private System.Windows.Forms.Button newTodoListButton;
+        private System.Windows.Forms.Button newEntryButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.TextBox titleTextBox;
+        private System.Windows.Forms.Label startDateTitle;
+        private System.Windows.Forms.DateTimePicker startDatePicker;
+        private System.Windows.Forms.Label endDateTitle;
+        private System.Windows.Forms.DateTimePicker endDatePicker;
+        private System.Windows.Forms.Label priorityLabel;
         private System.Windows.Forms.NumericUpDown priorityElement;
-		private System.Windows.Forms.Label choosenContactTitle;
-		private System.Windows.Forms.Label descriptionTitle;
-        private System.Windows.Forms.CheckBox isDoneCheckBox;
-		private System.Windows.Forms.RichTextBox descriptionBox;
+        private System.Windows.Forms.Label choosenContactTitle;
+        private System.Windows.Forms.Label descriptionTitle;
+        private System.Windows.Forms.CheckBox doneCheckBox;
+        private System.Windows.Forms.RichTextBox descriptionBox;
         private System.Windows.Forms.ListBox ContactsListBox;
         private System.Windows.Forms.ListBox AssignedContactsListbox;
         private System.Windows.Forms.Button right_button;
         private System.Windows.Forms.Button left_button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
-	}
+    }
 }

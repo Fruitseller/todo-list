@@ -245,14 +245,14 @@ namespace Todo.Forms
             app.EndDate = DateTime.Parse(endDatePicker.Text);
             app.Description = this.descriptionBox.Text;
             app.Priority = (int)this.priorityElement.Value;
-            app.IsDone = this.isDoneCheckBox.Checked;
+            app.Done = this.doneCheckBox.Checked;
           
             return app;
         }
 
         private void setViewToAppointment(Appointment app)
         {
-            bsAssignedContacts.DataSource=app.Contacts;
+            bsAssignedContacts.DataSource = app.Contacts;
             bsAssignedContacts.ResetBindings(false);
 
             bsContacts.DataSource = _Contacts.Where(x => !_Contacts.Any(y => y.ContactId == x.ContactId)).ToList();
@@ -263,12 +263,12 @@ namespace Todo.Forms
             endDatePicker.Text = app.EndDate.ToString();
             descriptionBox.Text = app.Description;
             priorityElement.Value = app.Priority;
-            isDoneCheckBox.Checked = app.IsDone;
+            doneCheckBox.Checked = app.Done;
         }
 
         private TreeNode setImageForAppointment(TreeNode node,Appointment app)
         {
-            if (app.IsDone)
+            if (app.Done)
             {
                 node.ImageIndex = 2;
                 node.SelectedImageIndex = 2;
@@ -287,5 +287,6 @@ namespace Todo.Forms
             if (this.todoListTreeView.SelectedNode.Tag is Appointment)
                 setViewToAppointment((Appointment)this.todoListTreeView.SelectedNode.Tag);
         }
+		
     }
 }
