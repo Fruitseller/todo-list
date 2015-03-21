@@ -35,7 +35,7 @@ namespace Todo.Business.Repositories
             return entity;
         }
 
-        public void DeleteById(T entity)
+        public void Delete(T entity)
         {
             session.Delete(entity);
             session.Flush();
