@@ -76,5 +76,10 @@ namespace Todo.Forms
 				this.listContactsForm.Focus();
 			}
 		}
+
+        private void onclose(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -73,7 +73,7 @@
             this.newTodoListButton.Name = "newTodoListButton";
             this.newTodoListButton.Size = new System.Drawing.Size(121, 40);
             this.newTodoListButton.TabIndex = 1;
-            this.newTodoListButton.Text = "Neue TODO-Liste";
+            this.newTodoListButton.Text = "Neuen Todozweig anhängen";
             this.newTodoListButton.UseVisualStyleBackColor = true;
             this.newTodoListButton.Click += new System.EventHandler(this.newTodoListButton_Click);
             // 
@@ -83,7 +83,7 @@
             this.newEntryButton.Name = "newEntryButton";
             this.newEntryButton.Size = new System.Drawing.Size(147, 40);
             this.newEntryButton.TabIndex = 2;
-            this.newEntryButton.Text = "Neuer Eintrag";
+            this.newEntryButton.Text = "Neuen Termin speichern";
             this.newEntryButton.UseVisualStyleBackColor = true;
             this.newEntryButton.Click += new System.EventHandler(this.newEntryButton_Click);
             // 
@@ -93,7 +93,7 @@
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(121, 40);
             this.deleteButton.TabIndex = 3;
-            this.deleteButton.Text = "Löschen";
+            this.deleteButton.Text = "Element Löschen";
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
