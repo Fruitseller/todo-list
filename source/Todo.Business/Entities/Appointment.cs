@@ -24,7 +24,8 @@ namespace Todo.Business
 				+ "EndDate: " + this.EndDate.ToShortDateString() + "\n"
 				+ "Priority: " + this.Priority.ToString() + "\n"
 				+ "Description: \"" + this.Description + "\"\n"
-				+ "Done: " + this.Done.ToString();
+				+ "Done: " + this.Done.ToString() + "\n"
+				+ "TodoId: " + this.TodoEntry.TodoId.ToString();
 		}
     }
 }

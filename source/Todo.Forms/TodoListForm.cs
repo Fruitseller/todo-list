@@ -123,7 +123,14 @@ namespace Todo.Forms
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-
+			TreeNode node = this.todoListTreeView.SelectedNode;
+			// TODO add possibility to delete Todo
+			if (node.Tag is Business.Appointment)
+			{
+				// TODO Refresh the UI after delete
+				Appointment app = (Appointment)node.Tag;
+				_appointmentRepository.DeleteById(app);
+			}
         }
 
         private void right_button_Click(object sender, EventArgs e)
