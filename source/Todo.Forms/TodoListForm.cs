@@ -124,13 +124,31 @@ namespace Todo.Forms
         private void deleteButton_Click(object sender, EventArgs e)
         {
 			TreeNode node = this.todoListTreeView.SelectedNode;
-			// TODO add possibility to delete Todo
 			if (node.Tag is Business.Appointment)
 			{
-				// TODO Refresh the UI after delete
 				Appointment app = (Appointment)node.Tag;
-				_appointmentRepository.DeleteById(app);
+				_appointmentRepository.Delete(app);
+                node.Remove();
 			}
+            if(node.Tag is Business.Todo)
+            {
+                if(node.Nodes.Count!=0)
+                {
+                    DialogResult yesNo = MessageBox.Show("Das Element hat unterteilte Elemente, die ebenfalls gelöscht werden. Fortfahren?",
+                     "Warnung",
+                     MessageBoxButtons.YesNo,
+                     MessageBoxIcon.Question,
+                     MessageBoxDefaultButton.Button2);
+
+                    if (yesNo == DialogResult.No)
+                        return;
+                }
+                Business.Todo todo = (Business.Todo)node.Tag;
+                //_appointmentRepository.DeleteAllByTodoId(todo.TodoId);
+
+                _todorepo.Delete(todo);
+                node.Remove();
+            }
         }
 
         private void right_button_Click(object sender, EventArgs e)
