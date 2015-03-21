@@ -348,8 +348,29 @@ namespace Todo.Forms
 			}
 			else
 			{
+                ResetInputForm();
 				this.newEntryButton.Text = "Neuen Termin speichern";
 			}
+        }
+
+        private void ResetInputForm()
+        {
+            this.titleTextBox.Text = String.Empty;
+            this.priorityElement.Value = 0;
+            this.descriptionBox.Text = String.Empty;
+            this.doneCheckBox.Checked = false;
+            this.endDatePicker.Value = DateTime.Now;
+            this.startDatePicker.Value = DateTime.Now;
+            initbindings();
+        }
+
+        public void initbindings()
+        {
+            bsContacts.DataSource= _contactRepository.GetAll();
+            bsAssignedContacts.DataSource = null;
+
+            bsContacts.ResetBindings(false);
+            bsAssignedContacts.ResetBindings(false);
         }
     }
 }
