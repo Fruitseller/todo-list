@@ -180,7 +180,7 @@ namespace Todo.Forms
             if (this.ContactsListBox.SelectedValue == null)
                 return;
 
-            switchero(_assignedContacts, _Contacts, _contactRepository.GetSingleById((int)ContactsListBox.SelectedValue));
+            switchero(_assignedContacts, _Contacts, _contactRepository.GetSingleById((UInt32)ContactsListBox.SelectedValue));
         }
 
         private void left_button_Click(object sender, EventArgs e)
@@ -188,7 +188,7 @@ namespace Todo.Forms
             if (AssignedContactsListbox.SelectedValue == null)
                 return;
 
-            switchero(_Contacts, _assignedContacts, _contactRepository.GetSingleById((int)AssignedContactsListbox.SelectedValue));
+            switchero(_Contacts, _assignedContacts, _contactRepository.GetSingleById((UInt32)AssignedContactsListbox.SelectedValue));
         }
 
         private void switchero(List<Contact> target, List<Contact> source, Contact item)
@@ -211,7 +211,7 @@ namespace Todo.Forms
             {
                 Business.Todo todo = new Business.Todo();
                 todo.Title = node.Text;
-                int id = todo.TodoId;
+                UInt32 id = todo.TodoId;
                 Business.Todo parent = null;
 
                 if (node.Parent != null && node.Parent.Tag is Business.Todo)
@@ -301,10 +301,14 @@ namespace Todo.Forms
 
         private void setViewToAppointment(Appointment app)
         {
-            bsAssignedContacts.DataSource = app.Contacts;
+            _assignedContacts = _appointmentRepository.GetSingleById(app.AppointmentId).Contacts.ToList();
+            bsAssignedContacts.DataSource = _assignedContacts;
             bsAssignedContacts.ResetBindings(false);
 
-            bsContacts.DataSource = _Contacts.Where(x => !_Contacts.Any(y => y.ContactId == x.ContactId)).ToList();
+
+            List<Contact> allContacts = _contactRepository.GetAll();
+            _Contacts = allContacts.Where(p => !_assignedContacts.Any(p2 => p2.ContactId == p.ContactId)).ToList();
+            bsContacts.DataSource = _Contacts;
             bsContacts.ResetBindings(false);
 
             this.titleTextBox.Text = app.Title;

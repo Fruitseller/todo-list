@@ -21,14 +21,14 @@ namespace Todo.Business.Repositories
             return items;
         }
 
-        public List<Appointment> GetByTodoId(int id)
+        public List<Appointment> GetByTodoId(UInt32 id)
         {
             List<Appointment> items;
             items = session.Query<Appointment>().Where(x => x.TodoEntry.TodoId==id).ToList();
             return items;
         }
 
-        public void DeleteAllByTodoId(int Id)
+        public void DeleteAllByTodoId(UInt32 Id)
         {
             List<Appointment> items = GetByTodoId(Id);
             foreach(var item in items)

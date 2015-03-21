@@ -7,7 +7,7 @@ namespace Todo.Business
 {
     public class Contact
     {
-        public virtual int ContactId { get; set; }
+        public virtual UInt32 ContactId { get; set; }
         public virtual string Gender { get; set; }
         public virtual string FirstName { get; set; }
         public virtual string Lastname { get; set; }

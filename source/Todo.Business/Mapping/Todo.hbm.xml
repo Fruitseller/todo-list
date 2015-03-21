@@ -4,7 +4,7 @@
                   namespace="Todo.Business">
 
   <class name="Todo" table="Todos">
-    <id name="TodoId" column="TodoId" type="int">
+    <id name="TodoId" column="TodoId" type="UInt32">
       <generator class="native"></generator>
     </id>
     <property name="Title" type="string"/>

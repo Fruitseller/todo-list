@@ -67,7 +67,7 @@ namespace Todo.Forms
 
         public Contact SetViewToModel()
         {
-            Contact item = _contactRepository.GetSingleById((int)Contacts_Listbox.SelectedValue);
+            Contact item = _contactRepository.GetSingleById((UInt32)Contacts_Listbox.SelectedValue);
             item.Lastname = lastnameTextBox.Text;
             item.FirstName =  firstnameTextBox.Text;
             item.Address = addressTextBox.Text ;
@@ -88,7 +88,7 @@ namespace Todo.Forms
 
         private void Index_Changed(object sender, EventArgs e)
         {
-            Contact item = _contactRepository.GetSingleById((int)Contacts_Listbox.SelectedValue);
+            Contact item = _contactRepository.GetSingleById((UInt32)Contacts_Listbox.SelectedValue);
             SetModelToView(item);
         }
 

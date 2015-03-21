@@ -15,7 +15,7 @@ namespace Todo.Business.Repositories
             
         }
 
-        public List<Todo> GetByParent(int Id)
+        public List<Todo> GetByParent(UInt32 Id)
         {
             List<Todo> items;
             items = session.Query<Todo>().Where(x => x.Parent.TodoId == Id).ToList();

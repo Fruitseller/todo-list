@@ -8,7 +8,7 @@ namespace Todo.Business
     public class Appointment
     {
         public virtual string Title { get; set; }
-        public virtual int AppointmentId { get; set; }
+        public virtual UInt32 AppointmentId { get; set; }
         public virtual DateTime StartDate { get; set; }
         public virtual DateTime EndDate { get; set; }
         public virtual int Priority { get; set; }

@@ -4,7 +4,7 @@
                   namespace="Todo.Business">
 
   <class name="Appointment" table="Appointments">
-    <id name="AppointmentId" column="AppointmentId" type="int">
+    <id name="AppointmentId" column="AppointmentId" type="UInt32">
       <generator class="native"></generator>
     </id>
     <property name="StartDate" type="DateTime" not-null="true" />
@@ -13,8 +13,8 @@
     <property name="Title" />
     <property name="Description" />
 	  <property name="Done" />
-    <many-to-one name="TodoEntry" column="TodoId" class="Todo" cascade="none"/>
-    <bag name="Contacts" table="Contacts_x_Appointments" lazy="false" inverse="true">
+    <many-to-one name="TodoEntry" column="TodoId" class="Todo"/>
+    <bag name="Contacts" table="Contacts_x_Appointments" lazy="false">
       <key column="AppointmentId"/>
       <many-to-many class="Contact" column="ContactId"/>
     </bag >

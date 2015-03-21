@@ -8,7 +8,7 @@ namespace Todo.Business
 {
     public class Todo
     {
-        public virtual int TodoId { get; set; }
+        public virtual UInt32 TodoId { get; set; }
         public virtual string Title { get; set; }
         public virtual Todo Parent { get; set; }
     }

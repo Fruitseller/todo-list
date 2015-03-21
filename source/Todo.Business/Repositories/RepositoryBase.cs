@@ -23,7 +23,7 @@ namespace Todo.Business.Repositories
             listOfEntities = session.Query<T>().ToList();
             return listOfEntities;
         }
-        public T GetSingleById(int id)
+        public T GetSingleById(UInt32 id)
         {
             if (id == -1)
                 return default(T);

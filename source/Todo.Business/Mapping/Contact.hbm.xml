@@ -4,7 +4,7 @@
                   namespace="Todo.Business">
 
   <class name="Contact" table="Contacts">
-    <id name="ContactId" column="ContactId" type="int">
+    <id name="ContactId" column="ContactId" type="UInt32">
       <generator class="native"></generator>
     </id>
     <property name="Gender" />
