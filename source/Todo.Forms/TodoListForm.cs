@@ -117,6 +117,9 @@ namespace Todo.Forms
 				updatedAppointment.AppointmentId = ((Appointment)node.Tag).AppointmentId;
 				updatedAppointment.TodoEntry = ((Appointment)node.Tag).TodoEntry;
 				_appointmentRepository.Update(updatedAppointment);
+				this.todoListTreeView.SelectedNode.Text = updatedAppointment.Title;
+				this.todoListTreeView.SelectedNode.Tag = updatedAppointment;
+				this.todoListTreeView.SelectedNode = setImageForAppointment(this.todoListTreeView.SelectedNode, updatedAppointment);
 				MessageBox.Show("Der Eintrag wurde erfolgreich aktualisiert!");
             }
             else

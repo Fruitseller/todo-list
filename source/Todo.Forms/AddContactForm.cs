@@ -43,6 +43,7 @@ namespace Todo.Forms
 			this.contact.MobileNumber = this.mobileTextBox.Text;
 			this.contact.Company = this.companyTextBox.Text;
 			this.contact.Department = this.departmentTextBox.Text;
+
 			this._contactRepository.Save(this.contact);
 		}
 
@@ -67,6 +68,27 @@ namespace Todo.Forms
 			saveToContactDB();
 			clearAllInputs();
 			MessageBox.Show("Kontakt erfolgreich gespeichert!");
+		}
+
+		private void businessRadioButton_CheckedChanged(object sender, EventArgs e)
+		{
+			if (this.businessRadioButton.Checked == false)
+			{
+				this.companyLabel.Visible = false;
+				this.companyTextBox.Text = String.Empty;
+				this.companyTextBox.Visible = false;
+
+				this.departmentLabel.Visible = false;
+				this.departmentTextBox.Text = String.Empty;
+				this.departmentTextBox.Visible = false;
+			}
+			else
+			{
+				this.companyLabel.Visible = true;
+				this.companyTextBox.Visible = true;
+				this.departmentLabel.Visible = true;
+				this.departmentTextBox.Visible = true;
+			}
 		}
 	}
 }

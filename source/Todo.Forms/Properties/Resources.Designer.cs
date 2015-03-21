@@ -63,6 +63,16 @@ namespace Todo.Forms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BGAddContactFormDark {
+            get {
+                object obj = ResourceManager.GetObject("BGAddContactFormDark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BGStartForm {
             get {
                 object obj = ResourceManager.GetObject("BGStartForm", resourceCulture);
