@@ -197,7 +197,8 @@ namespace Todo.Forms
         private void switchero(List<Contact> target, List<Contact> source, Contact item)
         {
             target.Add(item);
-            source.Remove(item);
+            source.Remove(source.Single(x=>x.ContactId==item.ContactId));
+            
             bsAssignedContacts.ResetBindings(false);
             bsContacts.ResetBindings(false);
         }
