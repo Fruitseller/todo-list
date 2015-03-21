@@ -99,7 +99,7 @@ namespace Todo.Forms
         private void newEntryButton_Click(object sender, EventArgs e)
         {
             Appointment app = getAppointmentFromForm();
-            TreeNode node =this.todoListTreeView.SelectedNode;
+            TreeNode node = this.todoListTreeView.SelectedNode;
 
             if(node.Tag is Business.Todo)
             {
@@ -113,7 +113,11 @@ namespace Todo.Forms
             }
             else if(node.Tag is Appointment)
             {
-                MessageBox.Show("Termin kann nicht einen Termin untergeordnet werden");
+				Appointment updatedAppointment = getAppointmentFromForm();
+				updatedAppointment.AppointmentId = ((Appointment)node.Tag).AppointmentId;
+				updatedAppointment.TodoEntry = ((Appointment)node.Tag).TodoEntry;
+				_appointmentRepository.Update(updatedAppointment);
+				MessageBox.Show("Der Eintrag wurde erfolgreich aktualisiert!");
             }
             else
 	        {
@@ -330,8 +334,14 @@ namespace Todo.Forms
         private void After_Select(object sender, TreeViewEventArgs e)
         {
             if (this.todoListTreeView.SelectedNode.Tag is Appointment)
-                setViewToAppointment((Appointment)this.todoListTreeView.SelectedNode.Tag);
+			{
+				setViewToAppointment((Appointment)this.todoListTreeView.SelectedNode.Tag);
+				this.newEntryButton.Text = "Eintrag aktualisieren";
+			}
+			else
+			{
+				this.newEntryButton.Text = "Neuen Termin speichern";
+			}
         }
-		
     }
 }

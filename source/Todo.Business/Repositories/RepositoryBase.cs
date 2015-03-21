@@ -43,6 +43,7 @@ namespace Todo.Business.Repositories
 
         public void Update(T entity)
         {
+			session.Clear();
             session.Update(entity);
             session.Flush();
         }
