@@ -314,7 +314,14 @@ namespace Todo.Forms
         private void After_Select(object sender, TreeViewEventArgs e)
         {
             if (this.todoListTreeView.SelectedNode.Tag is Appointment)
-                setViewToAppointment((Appointment)this.todoListTreeView.SelectedNode.Tag);
+			{
+				setViewToAppointment((Appointment)this.todoListTreeView.SelectedNode.Tag);
+				this.newEntryButton.Text = "Eintrag aktualisieren";
+			}
+			else
+			{
+				this.newEntryButton.Text = "Neuen Termin speichern";
+			}
         }
     }
 }
