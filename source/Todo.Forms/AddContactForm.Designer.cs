@@ -172,6 +172,7 @@
 			this.businessRadioButton.TabStop = true;
 			this.businessRadioButton.Text = "geschäftlich";
 			this.businessRadioButton.UseVisualStyleBackColor = true;
+			this.businessRadioButton.CheckedChanged += new System.EventHandler(this.businessRadioButton_CheckedChanged);
 			// 
 			// landlineLabel
 			// 
