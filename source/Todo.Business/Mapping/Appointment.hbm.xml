@@ -14,7 +14,7 @@
     <property name="Description" />
 	  <property name="Done" />
     <many-to-one name="TodoEntry" column="TodoId" class="Todo" cascade="none"/>
-    <bag name="Contacts" table="Contacts_x_Appointments" inverse="true">
+    <bag name="Contacts" table="Contacts_x_Appointments" lazy="false" inverse="true">
       <key column="AppointmentId"/>
       <many-to-many class="Contact" column="ContactId"/>
     </bag >
