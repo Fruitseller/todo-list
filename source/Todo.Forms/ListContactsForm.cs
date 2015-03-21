@@ -102,7 +102,7 @@ namespace Todo.Forms
 		private void deleteContactButton_Click(object sender, EventArgs e)
 		{
 			Contact item = SetViewToModel();
-			_contactRepository.DeleteById(item);
+			_contactRepository.Delete(item);
 			bs.RemoveCurrent();
 			Index_Changed(sender, e);
 			bs.ResetBindings(false);
