@@ -144,10 +144,30 @@ namespace Todo.Forms
                         return;
                 }
                 Business.Todo todo = (Business.Todo)node.Tag;
-                //_appointmentRepository.DeleteAllByTodoId(todo.TodoId);
+                DeleteRecursive(node);
+               
 
                 _todorepo.Delete(todo);
                 node.Remove();
+            }
+        }
+
+        private void DeleteRecursive(TreeNode node)
+        {
+            foreach(TreeNode childNode in node.Nodes)
+            {
+                if(childNode.Tag is Appointment)
+                {
+                    Appointment app = (Appointment)childNode.Tag;
+                    _appointmentRepository.Delete(app);
+                }
+                else if (childNode.Tag is Business.Todo)
+                {
+                    DeleteRecursive(childNode);
+                    Business.Todo todo = (Business.Todo)childNode.Tag;
+                    _todorepo.Delete(todo);
+                }
+
             }
         }
 

@@ -12,8 +12,7 @@
     <property name="Priority" />
     <property name="Title" />
     <property name="Description" />
-	<property name="Done" />
-	<!--TODO do we need all-delete-orphan-->
+	  <property name="Done" />
     <many-to-one name="TodoEntry" column="TodoId" class="Todo" cascade="none"/>
     <bag name="Contacts" table="Contacts_x_Appointments" inverse="true">
       <key column="AppointmentId"/>

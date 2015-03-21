@@ -27,5 +27,14 @@ namespace Todo.Business.Repositories
             items = session.Query<Appointment>().Where(x => x.TodoEntry.TodoId==id).ToList();
             return items;
         }
+
+        public void DeleteAllByTodoId(int Id)
+        {
+            List<Appointment> items = GetByTodoId(Id);
+            foreach(var item in items)
+            {
+                Delete(item);
+            }
+        }
     }
 }
