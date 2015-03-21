@@ -326,13 +326,13 @@ namespace Todo.Forms
         {
             if (app.Done)
             {
-                node.ImageIndex = 2;
-                node.SelectedImageIndex = 2;
+                node.ImageIndex = 1;
+                node.SelectedImageIndex = 1;
             }
             else
             {
-                node.ImageIndex = 1;
-                node.SelectedImageIndex = 1;
+                node.ImageIndex = 2;
+                node.SelectedImageIndex = 2;
             }
 
             return node;
