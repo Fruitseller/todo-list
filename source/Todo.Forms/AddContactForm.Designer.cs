@@ -252,6 +252,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackgroundImage = global::Todo.Forms.Properties.Resources.BGAddContactFormDark;
 			this.ClientSize = new System.Drawing.Size(544, 441);
 			this.Controls.Add(this.saveContactButton);
 			this.Controls.Add(this.departmentTextBox);
