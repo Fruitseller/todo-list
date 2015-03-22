@@ -37,6 +37,8 @@
 4. Projektdurchführung
   1. Phasenbezogener Projektablauf
   2. Gewählte Prinzipien, Methoden, Techniken und Werkzeuge
+  Wichtige Werkzeuge die notwendig waren um das Projekt zufriedenstellend zu erledigen waren Visual Studio 2013, die IDE wenn es darum geht Projekte mit der .NET Plattform zu erstellen, sowie Git ein Versionskontrollsystem welches die Zusammenarbeit unglaublich erleichtert.
+  Techniken die angewendet wurden, war NHibernate ein Objekt-zu-Relationaler mapper mit den man nicht mehr SQL statements selber schreiben muss sondern diese Logik weg abstrahiert wurde, sowie SQlite eine leichgewichtige SQL Datenbank die keinerlei Konfiguratiuonen bedarf.
   3. Phasenbezogene Ergebnisse
   4. Zeitaufwand
   5. Kontrolle und Steuerung
