@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpreadsheetLight;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -198,7 +199,9 @@ namespace Todo.Forms
         {
             target.Add(item);
             source.Remove(source.Single(x=>x.ContactId==item.ContactId));
-            
+
+            bsAssignedContacts.DataSource = _assignedContacts;
+            bsContacts.DataSource = _Contacts;
             bsAssignedContacts.ResetBindings(false);
             bsContacts.ResetBindings(false);
         }
@@ -371,6 +374,61 @@ namespace Todo.Forms
 
             bsContacts.ResetBindings(false);
             bsAssignedContacts.ResetBindings(false);
+        }
+
+        private void ExportButton_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Verzeichnis zum Speichern auswählen";
+            saveFileDialog.Filter = "Excel Datei|*.xlsx";
+            saveFileDialog.ShowDialog();
+            if (saveFileDialog.FileName != String.Empty)
+                saveExcelFile(saveFileDialog.FileName);
+        }
+
+        private void saveExcelFile(string file)
+        {
+            SLDocument sl = new SLDocument();
+            List<Appointment> allAppointments = _appointmentRepository.GetAll();
+            int y =2;
+
+            SLStyle style = sl.CreateStyle();
+            style.FormatCode = "dd.MM.yyyy HH:mm";
+
+            //Write Headers
+            sl.SetCellValue(1, 1, "Titel");
+            sl.SetCellValue(1, 2, "Beschreibung");
+            sl.SetCellValue(1, 3, "Priorität");
+            sl.SetCellValue(1, 4, "Beginn");
+            sl.SetCellValue(1, 5, "Ende");
+            sl.SetCellValue(1, 6, "Kontakte");
+
+
+
+            foreach(var app in allAppointments)
+            {
+                sl.SetCellValue(y, 1, app.Title);
+                sl.SetCellValue(y, 2, app.Description);
+                sl.SetCellValue(y, 3, app.Priority);
+                sl.SetCellValue(y, 4, app.StartDate);
+                sl.SetCellStyle(y, 4, style);
+                sl.SetCellValue(y, 5, app.EndDate);
+                sl.SetCellStyle(y, 5, style);
+                string contacts=String.Empty;
+
+                foreach (var contact in app.Contacts)
+                    contacts += contact.FullName + ';';
+                sl.SetCellValue(y, 6,contacts);
+
+                sl.AutoFitColumn(y, 4);
+                sl.AutoFitColumn(y, 5);
+
+                y++;
+            }
+            
+
+            sl.SaveAs(file);
+
         }
     }
 }
