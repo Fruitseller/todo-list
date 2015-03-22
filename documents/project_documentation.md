@@ -10,8 +10,10 @@
   Das Projekt wurde zum Teil in der Schule und an der dort befindlichen Windows 7 Rechnern mit Visual Studio 2010 durchgeführt. In den Arbeiten außerhalb der Schule wurde Visual Studio 2013 für die Entwicklung genutzt.
   Das Projekt ist mit beiden Visual Studio Versionen benutzbar und benötigt keiner Konvertierung.
   
-  Für die Versionskontrolle wurde ein Github Repository genutzt.
-  Zum commiten, pullen o.ä wurden die Github Kommandozeile oder die eingebauten Git Werkzeuge in Visual Studio 2013 benutzt.
+   Für die Versionskontrolle wurde ein Github Repository genutzt.
+   Zum commiten, pullen o.ä wurden die Github Kommandozeile oder die eingebauten Git Werkzeuge in Visual Studio 2013 benutzt.
+  
+   Die entstehende Anwendung selbst wird in standard Büros zum Einsatz kommen.
   
   2. Ist-Zustand
     1. Zielsetzung
@@ -49,18 +51,94 @@
 
 3. Projektplanung
   1. Vorgehensweise
+  Als Entwicklungsmodel haben wir das erweiterte Wasserfallmodel genommen. Die einzelnen Phasen sind so klar voneinander getrennt und so abgetrennt.
+  
+  
   2. Projekt- und Zeitplanung
+  Der Durchführungszeitraum des Projekts beginn Anfang Februar und soll bis zum 23. März abgeschlossen sein. Jede Woche stehen den beiden Programmierern ca. 4 Schulstunden zur Verfügung.
+  Die Zeit außerhalb der Berufsschule, die für das Projekt genutzt wird, ist nach eigenem Ermessen.
+  
+  Als erstes erfolgte die Erstellung des Pflichtenheftes, bei dem sich die Programmierer auf gemeinsame Ziele und herangehensweisen einigten. Aus diesem Entwurf konnten so die Phasen für den Projektablauf gegliedert werden:
+  
+	Definition(8):
+		Recherche (2)
+		Ist-Analyse (2)
+		Soll-Zustand festlegen (2)
+		Wunschkriterien festelegn (2)
+		Review (1)
+	Entwurf (6) :
+		Erstellung des Datenbank Schemas (2)
+		Aussuchen der geeigneten Komponenten und Frameworks (2)
+		Erstellen eines GUI Themes (2)
+		Review (1)
+	Implementierung (18):
+		Erstellen der Entitäten (2)
+		Erstellen des Mappings (2)
+		Erstellen und Testen des Backends (4)
+		Projektstruktur Modular gestalten (2)
+		Unit Tests erstellen (2)
+		Benutzeroberfläche (6)
+		Review (2)
+	Test (4)
+		Kriterien bestimmen (1)
+		Test der Anwendung (1)
+		Fehlerbehebung (2)
+		Review (1)
+	Deployment
+		Übergabe (1)
+  
   3. Änderungen gegenüber dem Projektauftrag
+  Es wurden kleine Änderungen an der Benutzung des Projekts vorgenommen, die die Benutzerhandhabung aber insgesamt verbessert.
+  
+  Die Erzeugung eines neuen Todozweigs ruft keinen Extra Dialog auf. Statdessen wird direkt ein neuer Knoten erzeugt und der Benutzer kann diesen direkt editieren. So erspart man sich einen Dialog und mehrere Clicks.
+  
+  Die Logik der Kontakterstellung wurde ebenfalls leicht abgeändert, da diese so logischer erscheint. Wählt ein Benutzer aus, dass der neue Kontakt privater Natur ist, werden die Felder für "Firma" und "Abteilung" ausgeblendet.
+  Ansonsten entspricht die Anwendung dem Pflichtenheft.
+  
   4. Geplante Wirtschaftlichkeit
   5. Qualitätsmanagementmaßnahmen
-    1. Zieldefinition
-    2. Planung und Kontrolle
-    3. Testplanung
+    1. Planung und Kontrolle
+	Jede Phase hat einen Review Punkt eingegliedert. In dieser Zeit sollen die Programmierer zusammen kommen um die Arbeit zu Bewerten und zu Kontrollieren.
+	
+    2. Testplanung
+	Durch Unit Tests soll während des Projekts die stetigen Veränderungen getestet werden. Nach Abschluß der Implementierungsphase wird die Anwendung sowie alle Ihre Funktionen in ihrer gesamtheit getestet.
 4. Projektdurchführung
   1. Phasenbezogener Projektablauf
+  
+  In der Defintionsphase wurden Möglichkeiten gesucht, wie man am besten die Ziele der Anwendung umsetzt. Dort entschieden wir uns für die Datenbank zu SQLite, da es eine leichtgewichtige Datenbank ist die keine Installation benötigt.
+  Für die Datenbankabstraktion sowie Datenabgreifung haben wir uns für Nhibernate entschlossen. Mit NHibernate wird das Datenbank Schema aus den gegebenen Entitäten und dem dazugehörigen Mappings bestimmt.
+  Auch ist kein einziges SQL Statement nötigt, da NHibernate selbst das SQLite aus den Linq Abfragen erzeugt und an die Datenbank schickt.
+  
+  Die Excel Export Funktion wird mit Hilfe des Framesworks "Spreadsheetlight" ermöglicht. Wir haben uns hier gegen die Verwendung des offiziellen Office Frameworks entschieden, da es eine Installation von Excel vorraussetzt.
+  
+  In der Entwurfsphase haben wir uns auf folgendes Datenbank Schema geeinigt : 
+  [SchemaBild]
+  
+  Die einzige Änderung zum finalen Schema ist die Ergänzung eines "Done" Felds in der Termin Entität, welches den Status eines Termins verdeutlichen soll.
+  Ebenso wurde Beispiele von ähnlichen Software Projekten gesucht, um ein gewisses Gefühl für das spätere Aussehen der Anwendung zu bekommen.
+  
+  Implementierungsphase:
+  
+  In der Implementierungsphase stand das Implementieren des Backends an erster Stelle. Es wurden zeurst die Entitäten bestimmt und umgesetzt, danach wurde das Mapping für diese Entitäten erstellt.
+  Daraufhin wurde eine Nhibernate Klasse erstellt, die für die Anwendung eine offene Session bereitstellt, mit dessen Hilfe die Datenbank angesprochen werden kann.
+  
+  Um die Datenoperationen zu erleichtern, wurde für jede Entität ein Repository geschrieben, welches Methoden wie GetbyId,Update und sonstiger CRUD Operationen bereitstellt. Im Zuge des Refactoring wurde eine generische Basisklasse
+  geschaffen, welche die allgemeinen CRUD Funktionen für alle ableitetenden Repositories bereitstellt. Die Repositories selbst haben dann nurnoch spezielle Methoden die nur für die dazugehörige Entität relevant sind.
+  
+  Im Anschluss an das Backend wurde mit der Entwicklung des Frontends begonnen. Im Mittelpunkt steht die Startform, welche ein Hub für alle anderen Forms bildet. In dieser Startform werden auch alle Repositories erzeugt und an die relevanten Forms weitergegeben.
+  Somit muss sich eine Form nicht selbst um seine Abhängigkeiten kümmern, sondern werden ihr diese explizit injiziert.
+  
+  Die Erstellung der Forms für die Kontaktliste und Kontakterzeugung lief dank unserer Vorarbeit im Backend recht unkompliziert.
+  Die Implementierung der Todoform hingegen hat eine Herausforderungen dargestellt, die wir aber letztendlich bewältigen konnten. 
+  Jeder Knoten der Todo Liste enthält in seinem "Tag" Feld das Objekt, was mit dem Knoten dargestellt werden soll. Zum Beispiel enthält ein TreeNode Objekt, das visuell einen Termin darstellt, in seinem "Tag" Feld die Objektdaten des dazugehörigen Termins.
+  Mit dieser Hilfestellung konnten wir somit eine Treeview entwickeln, mit der mehrere Objekttypen darstell- und editierbar sind.
+  
   2. Gewählte Prinzipien, Methoden, Techniken und Werkzeuge
   Wichtige Werkzeuge die notwendig waren um das Projekt zufriedenstellend zu erledigen waren Visual Studio 2013, die IDE wenn es darum geht Projekte mit der .NET Plattform zu erstellen, sowie Git ein Versionskontrollsystem welches die Zusammenarbeit unglaublich erleichtert.
   Techniken die angewendet wurden, war NHibernate ein Objekt-zu-Relationaler mapper mit den man nicht mehr SQL statements selber schreiben muss sondern diese Logik weg abstrahiert wurde, sowie SQlite eine leichgewichtige SQL Datenbank die keinerlei Konfiguratiuonen bedarf.
+  
+  Stetiges Refactoring war ebenfalls eine wichtige Methodik, um den Quellcode klar und verständlich zu gestalten. Ebenso wurde das Projekt in verschiedene Unterprojekte geteilt, um die Verantwortung eines Projektes zu trennen.
+  
   3. Phasenbezogene Ergebnisse
   4. Zeitaufwand
   5. Kontrolle und Steuerung
