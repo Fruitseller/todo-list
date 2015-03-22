@@ -20,3 +20,4 @@ http://system.data.sqlite.org/downloads/1.0.95.0/sqlite-netFx40-binary-bundle-Wi
 
 In Todo.Business.Database, add a reference to the downloadeded DLLs. All DLLs should go into the "vendor/SQlite"
 folder.
+
