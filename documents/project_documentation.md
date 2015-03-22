@@ -3,8 +3,6 @@
 1. Einleitende Bemerkungen
 2. Projektauftrag
   1. Projektumfeld
-    1. Firmenumfeld
-    2. Abteilungsumfeld
   2. Ist-Zustand
     1. Zielsetzung
 
@@ -47,7 +45,12 @@
   2. Zeitlicher Soll- / Ist-Vergleich
     1. Abweichungen
   3. Wirtschaftlichkeitsbetrachtung
-    1. Break-even-point
+  
+  An dieser Stelle soll herausgefunden werden, ob die Erstellung der Software sich auszahlen wird.
+  Zur Zeit haben die Mitarbeiter keine Möglichkeit um Termine und Aufgaben sinnvoll aufzuschreiben. Jeder Mitarbeiter braucht täglich durchschnittlich 30 min für die Organisation der Termine. Bei einen Stundensatz von 85 € macht das im Monat für alle 80 Mitarbeiter 65.000 € die eingespart werden könnten wenn die Termin und Aufgabenverwaltung effizienter ablaufen würde.
+  Bei einer Projektdauer von 2 Monaten und 2 Mitarbeitern die Vollzeit daran arbeiten belaufen sich die Kosten auf 24.000 €.
+  Es ist davon auszugehen, dass die täglich aufgewendete Zeit für die Termin und Aufgabenverwaltung auf 10 min sinken wird. Also kostet es die Firma nur noch 22.666 €. Das Projekt würde sich also bereits nach den ersten Monat rentieren.
+
   4. Reflexion
     1. Fachliche Reflexion
     2. Persönliche Reflexion / lessons learned
