@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Todo.Forms
 {
@@ -89,6 +90,33 @@ namespace Todo.Forms
 				this.departmentLabel.Visible = true;
 				this.departmentTextBox.Visible = true;
 			}
+		}
+
+		private string generateRandomString()
+		{
+			string random = Path.GetRandomFileName();
+			random = random.Replace(".", "");
+			random = random.Substring(0, 7);
+			return random;
+		}
+
+		private string generateRandomNumbers()
+		{
+			Random random = new Random();
+			return random.Next(9999, 100000).ToString();
+		}
+
+		private void generateRandomContactButton_Click(object sender, EventArgs e)
+		{
+			this.lastnameTextBox.Text = this.generateRandomString();
+			this.firstnameTextBox.Text = this.generateRandomString();
+			this.addressTextBox.Text = this.generateRandomString();
+			this.cityTextBox.Text = this.generateRandomString();
+			this.areacodeTextBox.Text = this.generateRandomNumbers();
+			this.landlineTextBox.Text = this.generateRandomNumbers();
+			this.mobileTextBox.Text = this.generateRandomNumbers();
+			this.companyTextBox.Text = this.generateRandomString();
+			this.departmentTextBox.Text = this.generateRandomString();
 		}
 	}
 }

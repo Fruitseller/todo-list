@@ -51,6 +51,7 @@
 			this.companyTextBox = new System.Windows.Forms.TextBox();
 			this.departmentTextBox = new System.Windows.Forms.TextBox();
 			this.saveContactButton = new System.Windows.Forms.Button();
+			this.generateRandomContactButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// genderLabel
@@ -248,12 +249,23 @@
 			this.saveContactButton.UseVisualStyleBackColor = true;
 			this.saveContactButton.Click += new System.EventHandler(this.saveContactButton_Click);
 			// 
+			// generateRandomContactButton
+			// 
+			this.generateRandomContactButton.Location = new System.Drawing.Point(28, 379);
+			this.generateRandomContactButton.Name = "generateRandomContactButton";
+			this.generateRandomContactButton.Size = new System.Drawing.Size(192, 23);
+			this.generateRandomContactButton.TabIndex = 23;
+			this.generateRandomContactButton.Text = "Generate Random Contact";
+			this.generateRandomContactButton.UseVisualStyleBackColor = true;
+			this.generateRandomContactButton.Click += new System.EventHandler(this.generateRandomContactButton_Click);
+			// 
 			// AddContactForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Todo.Forms.Properties.Resources.BGAddContactFormDark;
 			this.ClientSize = new System.Drawing.Size(544, 441);
+			this.Controls.Add(this.generateRandomContactButton);
 			this.Controls.Add(this.saveContactButton);
 			this.Controls.Add(this.departmentTextBox);
 			this.Controls.Add(this.companyTextBox);
@@ -309,5 +321,6 @@
 		private System.Windows.Forms.TextBox companyTextBox;
 		private System.Windows.Forms.TextBox departmentTextBox;
 		private System.Windows.Forms.Button saveContactButton;
+		private System.Windows.Forms.Button generateRandomContactButton;
 	}
 }
