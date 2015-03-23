@@ -158,6 +158,9 @@
   3. Phasenbezogene Ergebnisse
   4. Zeitaufwand
   5. Kontrolle und Steuerung
+  
+	Zur Kontrolle dienen die im Anhang E beschriebenen Testfälle.
+
 5. Projektabschluss
   1. Fachlicher Soll- / Ist-Vergleich
   2. Zeitlicher Soll- / Ist-Vergleich
@@ -177,5 +180,18 @@
   * Anhang B: Abkürzungsverzeichnis
   * Anhang C: Quellenverzeichnis
   * Anhang D: Lasten- und Pflichtenheft
-  * Anhang E: Testprotokoll
+  * Anhang E: Testfälle
+  
+	*1. Kontakt erfolgreich hinzufügen*
+
+	Der Benutzer öffnet die "Neuer Kontakt" Form und trägt in alle Eingabefelder die entsprechenden Werte ein. Erwartetes Verhalten ist, dass nachdem auf "Speichern" geklickt wurde eine MessageBox mit den Inhalt "Kontakt erfolgreich gespeichert" auftaucht und alle Eingabefelder wieder leer sind.
+
+	*2. Kontaktinformationen erfolgreich anpassen*
+
+	Der Benutzer öffnet die "Kontakt-Liste" Form, wählt den gewünschten Kontakt aus und passt ihn an. Erwartetes Verhalten ist, dass nach den klicken auf "Änderung Speichern" eine MessageBox mit den Inhalt "Kontakt erfolgreich gespeichert" erscheint und mögliche Änderungen in der ListBox sichbar werden.
+
+	*3. Kontakt erfolgreich löschen*
+
+	Der Benutzer öffnet die "Kontakt-Liste" Form, wählt den gewünschten Kontakt aus und löscht ihn. Erwartetes Verhalten ist, dass nach den klicken auf "Kontakt Löschen" eine MessageBox mit den Inhalt "Kontakt erfolgreich gelöscht" erscheint und der Kontakt aus der ListBox verschwunden ist.
+
   * Anhang F: Projektantrag
