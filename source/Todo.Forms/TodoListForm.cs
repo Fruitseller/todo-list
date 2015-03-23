@@ -84,7 +84,7 @@ namespace Todo.Forms
         {
             if(todoListTreeView.SelectedNode.Tag is Appointment)
             {
-                MessageBox.Show("Todo Liste kann nicht einem Termin untergeordnet werden");
+                MessageBox.Show("Todo Liste kann nicht einem Termin untergeordnet werden", "Hinweis");
                 return;
             }
             TreeNode node = this.todoListTreeView.SelectedNode;
@@ -121,11 +121,11 @@ namespace Todo.Forms
 				this.todoListTreeView.SelectedNode.Text = updatedAppointment.Title;
 				this.todoListTreeView.SelectedNode.Tag = updatedAppointment;
 				this.todoListTreeView.SelectedNode = setImageForAppointment(this.todoListTreeView.SelectedNode, updatedAppointment);
-				MessageBox.Show("Der Eintrag wurde erfolgreich aktualisiert!");
+				MessageBox.Show("Der Eintrag wurde erfolgreich aktualisiert!", "Hinweis");
             }
             else
 	        {
-                MessageBox.Show("Kein Baumelement ausgewählt");
+                MessageBox.Show("Kein Baumelement ausgewählt", "Hinweis");
 	        }
         }
 
@@ -390,7 +390,7 @@ namespace Todo.Forms
         {
             SLDocument sl = new SLDocument();
             List<Appointment> allAppointments = _appointmentRepository.GetAll();
-            int y =2;
+            int y = 2;
 
             SLStyle style = sl.CreateStyle();
             style.FormatCode = "dd.MM.yyyy HH:mm";

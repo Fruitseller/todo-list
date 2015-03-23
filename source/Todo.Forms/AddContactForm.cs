@@ -68,7 +68,7 @@ namespace Todo.Forms
 		{
 			saveToContactDB();
 			clearAllInputs();
-			MessageBox.Show("Kontakt erfolgreich gespeichert!");
+			MessageBox.Show("Kontakt erfolgreich gespeichert!", "Hinweis");
 		}
 
 		private void businessRadioButton_CheckedChanged(object sender, EventArgs e)

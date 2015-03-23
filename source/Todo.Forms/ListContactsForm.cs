@@ -97,6 +97,7 @@ namespace Todo.Forms
             Contact item = SetViewToModel();
             _contactRepository.Update(item);
             bs.ResetBindings(false);
+			MessageBox.Show("Kontakt erfolgreich gespeichert!", "Hinweis");
         }
 
 		private void deleteContactButton_Click(object sender, EventArgs e)
@@ -106,6 +107,7 @@ namespace Todo.Forms
 			bs.RemoveCurrent();
 			Index_Changed(sender, e);
 			bs.ResetBindings(false);
+			MessageBox.Show("Kontakt erfolgreich gelöscht!", "Hinweis");
 		}
 	}
 }
