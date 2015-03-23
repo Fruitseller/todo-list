@@ -1,12 +1,13 @@
 ### Inhaltsverzeichnis
 
 1. Einleitende Bemerkungen
+
 	Inhalt dieses Dokuments soll die genaue Beschreibung des finales Projektstands wiederspiegeln.
 	Darüberhinaus soll ein Einblick in die Entwicklung des Projekts gegeben werden sowie über eventuelle Änderungen zum Auftrag informieren.
-	
 
 2. Projektauftrag
   1. Projektumfeld
+
   Das Projekt wurde zum Teil in der Schule und an der dort befindlichen Windows 7 Rechnern mit Visual Studio 2010 durchgeführt. In den Arbeiten außerhalb der Schule wurde Visual Studio 2013 für die Entwicklung genutzt.
   Das Projekt ist mit beiden Visual Studio Versionen benutzbar und benötigt keiner Konvertierung.
   
@@ -33,17 +34,21 @@
 
     Technische Schnittstellen sind zum einen Systemgegebene wie Windows und dot net 4.
 	Schnitstellen die von der Anwendung benutzt werden sind:
-	Nhibernate
-	SQLite
-	Spreadsheetlight
+	- Nhibernate
+	- SQLite
+	- Spreadsheetlight
 
   5. Technisches Umfeld
+
 	Die Software läuft auf allen möglichen System Konfigurationen und benötigt nur eine kleine Menge des Arbeitsspeicher. Einzige Grundvorraussetzungen sind eine Windows und dot net 4 Installation.
 	Die benötigten DLLs liegen der Software bei.
+
   6. Einzuhaltende Standards
     1. Qualitätsmanagement-Standards
+
 	Es wurden Unit Tests entwickelt um schnell die Korrekte Datenhandhabung des Projekts zu bestimmen.Desweiteren wurden nach Entwicklung von Features von allen Entwicklern manuelle Tests durchgeführt.
 	Sollte das Programm auf Fehler treffen, wird die Fehlermeldung an den Benutzer weitergegeben, damit man so eine möglichst genaue Beschreibung des Problems durchgeben kann.
+
     2. Entwicklungsstandards
 
     Der Quellcode der Anwendung wurde auschließlich mit englischen Begriffen entwickelt. Desweiteren wurde so oft wie möglich Refactored.
@@ -51,43 +56,50 @@
 
 3. Projektplanung
   1. Vorgehensweise
+
   Als Entwicklungsmodel haben wir das erweiterte Wasserfallmodel genommen. Die einzelnen Phasen sind so klar voneinander getrennt und so abgetrennt.
   
-  
   2. Projekt- und Zeitplanung
+
   Der Durchführungszeitraum des Projekts beginn Anfang Februar und soll bis zum 23. März abgeschlossen sein. Jede Woche stehen den beiden Programmierern ca. 4 Schulstunden zur Verfügung.
   Die Zeit außerhalb der Berufsschule, die für das Projekt genutzt wird, ist nach eigenem Ermessen.
   
   Als erstes erfolgte die Erstellung des Pflichtenheftes, bei dem sich die Programmierer auf gemeinsame Ziele und herangehensweisen einigten. Aus diesem Entwurf konnten so die Phasen für den Projektablauf gegliedert werden:
   
 	Definition(8):
-		Recherche (2)
-		Ist-Analyse (2)
-		Soll-Zustand festlegen (2)
-		Wunschkriterien festelegn (2)
-		Review (1)
-	Entwurf (6) :
-		Erstellung des Datenbank Schemas (2)
-		Aussuchen der geeigneten Komponenten und Frameworks (2)
-		Erstellen eines GUI Themes (2)
-		Review (1)
+
+		- Recherche (2)
+		- Ist-Analyse (2)
+		- Soll-Zustand festlegen (2)
+		- Wunschkriterien festelegn (2)
+		- Review (1)
+	Entwurf (6):
+
+		- Erstellung des Datenbank Schemas (2)
+		- Aussuchen der geeigneten Komponenten und Frameworks (2)
+		- Erstellen eines GUI Themes (2)
+		- Review (1)
 	Implementierung (18):
-		Erstellen der Entitäten (2)
-		Erstellen des Mappings (2)
-		Erstellen und Testen des Backends (4)
-		Projektstruktur Modular gestalten (2)
-		Unit Tests erstellen (2)
-		Benutzeroberfläche (6)
-		Review (2)
-	Test (4)
-		Kriterien bestimmen (1)
-		Test der Anwendung (1)
-		Fehlerbehebung (2)
-		Review (1)
-	Deployment
-		Übergabe (1)
+
+		- Erstellen der Entitäten (2)
+		- Erstellen des Mappings (2)
+		- Erstellen und Testen des Backends (4)
+		- Projektstruktur Modular gestalten (2)
+		- Unit Tests erstellen (2)
+		- Benutzeroberfläche (6)
+		- Review (2)
+	Test (4):
+	
+		- Kriterien bestimmen (1)
+		- Test der Anwendung (1)
+		- Fehlerbehebung (2)
+		- Review (1)
+	Deployment:
+	
+		- Übergabe (1)
   
   3. Änderungen gegenüber dem Projektauftrag
+
   Es wurden kleine Änderungen an der Benutzung des Projekts vorgenommen, die die Benutzerhandhabung aber insgesamt verbessert.
   
   Die Erzeugung eines neuen Todozweigs ruft keinen Extra Dialog auf. Statdessen wird direkt ein neuer Knoten erzeugt und der Benutzer kann diesen direkt editieren. So erspart man sich einen Dialog und mehrere Clicks.
@@ -98,10 +110,13 @@
   4. Geplante Wirtschaftlichkeit
   5. Qualitätsmanagementmaßnahmen
     1. Planung und Kontrolle
+
 	Jede Phase hat einen Review Punkt eingegliedert. In dieser Zeit sollen die Programmierer zusammen kommen um die Arbeit zu Bewerten und zu Kontrollieren.
 	
     2. Testplanung
+
 	Durch Unit Tests soll während des Projekts die stetigen Veränderungen getestet werden. Nach Abschluß der Implementierungsphase wird die Anwendung sowie alle Ihre Funktionen in ihrer gesamtheit getestet.
+
 4. Projektdurchführung
   1. Phasenbezogener Projektablauf
   
@@ -134,6 +149,7 @@
   Mit dieser Hilfestellung konnten wir somit eine Treeview entwickeln, mit der mehrere Objekttypen darstell- und editierbar sind.
   
   2. Gewählte Prinzipien, Methoden, Techniken und Werkzeuge
+
   Wichtige Werkzeuge die notwendig waren um das Projekt zufriedenstellend zu erledigen waren Visual Studio 2013, die IDE wenn es darum geht Projekte mit der .NET Plattform zu erstellen, sowie Git ein Versionskontrollsystem welches die Zusammenarbeit unglaublich erleichtert.
   Techniken die angewendet wurden, war NHibernate ein Objekt-zu-Relationaler mapper mit den man nicht mehr SQL statements selber schreiben muss sondern diese Logik weg abstrahiert wurde, sowie SQlite eine leichgewichtige SQL Datenbank die keinerlei Konfiguratiuonen bedarf.
   
