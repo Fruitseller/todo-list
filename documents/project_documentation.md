@@ -172,13 +172,16 @@
 
   2. Reflexion
     1. Persönliche Reflexion / lessons learned
-
+		Markus: Am Anfang des Projekts habe ich mich am meisten mit dem Backend außeinandergesetzt und konnte dort Erfahrungen sammeln, was NHibernate aber auch Projektstruktur angeht. Meine bestehenden .NET Kentnisse konnte ich in dem Projekt zum Einsatz bringen und habe dort ebenfalls noch einige Sachen gelernt. Ebenso habe ich zum ersten mal Git/Github genutzt, was mir sehr gefiel.
+		Fürs nächste mal würde ich erst die Dokumentation über die Technologien etwas genauer studieren, da viele Fehler mit NHibernate vermeidbar gewesen wären, hätte man sich etwas genauer gewisse Passagen durchgelesen. 
+	
 		Peter: Im Laufe des Projekts konnte ich viel Erfahrung sammeln in der C# Programmierung mit der .NET Platform und NHibernate. Für weitere Projekte werden ich aufjedenfall im Hinterkopf behalten wie nützlich es ist, wenn man object-relational mapper benutzt um Teile des Projekts zu abstrahieren. Auch wenn die .NET Platform per se nicht schlecht ist, gefällt sie mir persönlich nicht und ich würde es vorziehen bei zukünftigen Projekten andere Technologien zu verwenden.
 		Was ich beim nächsten mal besser machen kann ist die höhere Priorisierung der Dokumentation sowie die Beseitigung der letzen Bugs. Beides erwies sich schwieriger als gedacht.
 
 6. Anhang
   * Anhang A: Lasten- und Pflichtenheft
   * Anhang B: Testfälle
+  * Anhang C: UML und Sequenz Diagramme
   
 	*1. Kontakt erfolgreich hinzufügen*
 
