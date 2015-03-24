@@ -168,9 +168,9 @@
   3. Wirtschaftlichkeitsbetrachtung
   
   An dieser Stelle soll herausgefunden werden, ob die Erstellung der Software sich auszahlen wird.
-  Zur Zeit haben die Mitarbeiter keine Möglichkeit um Termine und Aufgaben sinnvoll aufzuschreiben. Jeder Mitarbeiter braucht täglich durchschnittlich 30 min für die Organisation der Termine. Bei einen Stundensatz von 85 € macht das im Monat für alle 80 Mitarbeiter 65.000 € die eingespart werden könnten wenn die Termin und Aufgabenverwaltung effizienter ablaufen würde.
-  Bei einer Projektdauer von 2 Monaten und 2 Mitarbeitern die Vollzeit daran arbeiten belaufen sich die Kosten auf 24.000 €.
-  Es ist davon auszugehen, dass die täglich aufgewendete Zeit für die Termin und Aufgabenverwaltung auf 10 min sinken wird. Also kostet es die Firma nur noch 22.666 €. Das Projekt würde sich also bereits nach den ersten Monat rentieren.
+  Zur Zeit haben die Mitarbeiter des Kunden keine Möglichkeit um Termine und Aufgaben sinnvoll aufzuschreiben. Jeder Mitarbeiter braucht täglich durchschnittlich 30 min für die Organisation der Termine. Bei einen Stundensatz von 85 € macht das im Monat für alle 80 Mitarbeiter 65.000 € die sinnvoller eingeplant werden könnten.
+  Bei einer Projektdauer von 2 Monaten und 2 Mitarbeitern belaufen sich die Kosten auf 24.000 €.
+  Es ist davon auszugehen, dass die täglich aufgewendete Zeit für die Termin und Aufgabenverwaltung auf 10 min sinken wird. Also kostet die Terminverwaltung den Kunden nur noch 22.666 €. Das Projekt würde sich also bereits nach den ersten Monat rentieren.
 
   4. Reflexion
     1. Fachliche Reflexion
