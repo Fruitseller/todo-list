@@ -172,6 +172,10 @@
 
   2. Reflexion
     1. Persönliche Reflexion / lessons learned
+
+		Peter: Im Laufe des Projekts konnte ich viel Erfahrung sammeln in der C# Programmierung mit der .NET Platform und NHibernate. Für weitere Projekte werden ich aufjedenfall im Hinterkopf behalten wie nützlich es ist, wenn man object-relational mapper benutzt um Teile des Projekts zu abstrahieren. Auch wenn die .NET Platform per se nicht schlecht ist, gefällt sie mir persönlich nicht und ich würde es vorziehen bei zukünftigen Projekten andere Technologien zu verwenden.
+		Was ich beim nächsten mal besser machen kann ist die höhere Priorisierung der Dokumentation sowie die Beseitigung der letzen Bugs. Beides erwies sich schwieriger als gedacht.
+
 6. Anhang
   * Anhang A: Lasten- und Pflichtenheft
   * Anhang B: Testfälle
