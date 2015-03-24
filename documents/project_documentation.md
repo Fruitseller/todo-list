@@ -106,9 +106,8 @@
   
   Die Logik der Kontakterstellung wurde ebenfalls leicht abgeändert, da diese so logischer erscheint. Wählt ein Benutzer aus, dass der neue Kontakt privater Natur ist, werden die Felder für "Firma" und "Abteilung" ausgeblendet.
   Ansonsten entspricht die Anwendung dem Pflichtenheft.
-  
-  4. Geplante Wirtschaftlichkeit
-  5. Qualitätsmanagementmaßnahmen
+
+  4. Qualitätsmanagementmaßnahmen
     1. Planung und Kontrolle
 
 	Jede Phase hat einen Review Punkt eingegliedert. In dieser Zeit sollen die Programmierer zusammen kommen um die Arbeit zu Bewerten und zu Kontrollieren.
@@ -156,31 +155,26 @@
   Stetiges Refactoring war ebenfalls eine wichtige Methodik, um den Quellcode klar und verständlich zu gestalten. Ebenso wurde das Projekt in verschiedene Unterprojekte geteilt, um die Verantwortung eines Projektes zu trennen.
   
   3. Phasenbezogene Ergebnisse
-  4. Zeitaufwand
-  5. Kontrolle und Steuerung
+
+	Anfangs waren wir skeptisch ob es sich lohnen würde NHibernate zu benutzen um die Datenbank zu abstrahieren. Doch im Laufe des Projekts stellte sich heraus, dass der Mehraufwand den man am Anfang des Projekts investiert hat sich mehr als auszahlt. Mithilfe von NHibernate waren wir in der Lage viel schneller das eigentliche Programm zu entwickeln, weil wir uns nicht mehr darum kümmern mussten wie man die Datenbank anbindet und wie man die Daten aus und in die Datenbank bekommt.
+
+  4. Kontrolle und Steuerung
   
-	Zur Kontrolle dienen die im Anhang E beschriebenen Testfälle.
+	Zur Kontrolle dienen die im Anhang B beschriebenen Testfälle.
 
 5. Projektabschluss
-  1. Fachlicher Soll- / Ist-Vergleich
-  2. Zeitlicher Soll- / Ist-Vergleich
-    1. Abweichungen
-  3. Wirtschaftlichkeitsbetrachtung
+  1. Wirtschaftlichkeitsbetrachtung
   
   An dieser Stelle soll herausgefunden werden, ob die Erstellung der Software sich auszahlen wird.
   Zur Zeit haben die Mitarbeiter des Kunden keine Möglichkeit um Termine und Aufgaben sinnvoll aufzuschreiben. Jeder Mitarbeiter braucht täglich durchschnittlich 30 min für die Organisation der Termine. Bei einen Stundensatz von 85 € macht das im Monat für alle 80 Mitarbeiter 65.000 € die sinnvoller eingeplant werden könnten.
   Bei einer Projektdauer von 2 Monaten und 2 Mitarbeitern belaufen sich die Kosten auf 24.000 €.
   Es ist davon auszugehen, dass die täglich aufgewendete Zeit für die Termin und Aufgabenverwaltung auf 10 min sinken wird. Also kostet die Terminverwaltung den Kunden nur noch 22.666 €. Das Projekt würde sich also bereits nach den ersten Monat rentieren.
 
-  4. Reflexion
-    1. Fachliche Reflexion
-    2. Persönliche Reflexion / lessons learned
+  2. Reflexion
+    1. Persönliche Reflexion / lessons learned
 6. Anhang
-  * Anhang A: Glossar
-  * Anhang B: Abkürzungsverzeichnis
-  * Anhang C: Quellenverzeichnis
-  * Anhang D: Lasten- und Pflichtenheft
-  * Anhang E: Testfälle
+  * Anhang A: Lasten- und Pflichtenheft
+  * Anhang B: Testfälle
   
 	*1. Kontakt erfolgreich hinzufügen*
 
@@ -209,5 +203,3 @@
 	*7. Termine erfolgreich exportieren*
 
 	Der Benutzer öffnet die "TODO-Listen" Form und exportiert erfolgreich eine Excel Datei mit allen Terminen. Erwartetes Verhalten ist, dass nach den Klick auf "Excel Export Termine" ein Speicherort ausgewählt wird, die Datei gespeichert werden kann und beim öffnen alle Termine enthalten sind.
-
-  * Anhang F: Projektantrag
