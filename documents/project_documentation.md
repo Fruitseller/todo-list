@@ -194,4 +194,20 @@
 
 	Der Benutzer öffnet die "Kontakt-Liste" Form, wählt den gewünschten Kontakt aus und löscht ihn. Erwartetes Verhalten ist, dass nach den klicken auf "Kontakt Löschen" eine MessageBox mit den Inhalt "Kontakt erfolgreich gelöscht" erscheint und der Kontakt aus der ListBox verschwunden ist.
 
+	*4. Todoliste erfolgreich anlegen*
+
+	Der Benutzer öffnet die "TODO-Listen" Form und erstellt eine neue Todoliste mit eigenen Namen. Erwartetes Verhalten ist, dass nach den Klick auf "Neuen Todozweig anlegen" eine neue Todoliste erstellt wird ausser man versucht sie unter einen Termin zu speichern, dann erscheint eine MessageBox mit den Inhalt "Todoliste kann nicht einen Termin untergeordnet werden".
+
+	*5. Termin erfolgreich anlegen*
+
+	Der Benutzer öffnet die "TODO-Listen" Form, wählt eine Todoliste aus, gibt Termindaten ein und speichert der Termin. Erwartetes Verhalten ist, dass nach der Eingabe aller Daten wie z.B. Titel, Startdatum, zugewiesene Kontakte oder Beschreibung und den Klick auf "Neuen Termin speichern" der Termin in der TreeView unter der Todoliste auftaucht.
+
+	*6. Termin erfolgreich anpassen*
+
+	Der Benutzer öffnet die "TODO-Listen" Form, wählt den gewünschten Termin aus und passt ihn an. Erwartetes Verhalten ist, dass nach den Abändern der Daten und den Klick auf "Eintrag aktualisieren" eine MessageBox mit den Inhalt "Der Eintrag wurde erfolgreich aktualisiert" erscheint und mögliche Änderungen in der TreeView sichtbar sind.
+
+	*7. Termine erfolgreich exportieren*
+
+	Der Benutzer öffnet die "TODO-Listen" Form und exportiert erfolgreich eine Excel Datei mit allen Terminen. Erwartetes Verhalten ist, dass nach den Klick auf "Excel Export Termine" ein Speicherort ausgewählt wird, die Datei gespeichert werden kann und beim öffnen alle Termine enthalten sind.
+
   * Anhang F: Projektantrag
