@@ -35,6 +35,7 @@ namespace Todo.Forms
             this._appointmentRepository = _appointmentRepository;
             InitializeComponent();
             InitializeFormElements();
+            this.DoubleBuffered = true;
         }
 
         private void InitializeFormElements()
@@ -175,7 +176,6 @@ namespace Todo.Forms
                     Business.Todo todo = (Business.Todo)childNode.Tag;
                     _todorepo.Delete(todo);
                 }
-
             }
         }
 
@@ -369,8 +369,11 @@ namespace Todo.Forms
 
         public void initbindings()
         {
-            bsContacts.DataSource= _contactRepository.GetAll();
-            bsAssignedContacts.DataSource = null;
+            _Contacts = _contactRepository.GetAll();
+            bsContacts.DataSource= _Contacts;
+
+            _assignedContacts = new List<Contact>();
+            bsAssignedContacts.DataSource = _assignedContacts;
 
             bsContacts.ResetBindings(false);
             bsAssignedContacts.ResetBindings(false);
