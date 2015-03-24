@@ -20,6 +20,11 @@ namespace Todo.Forms
             this._contactRepository = _contactRepository;
             InitializeComponent();
 			initializeSelectables();
+
+            if (System.Diagnostics.Debugger.IsAttached)
+                this.generateRandomContactButton.Visible = true;
+            else
+                this.generateRandomContactButton.Visible = false;
         }
 
 		protected void initializeSelectables()
